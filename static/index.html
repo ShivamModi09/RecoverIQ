@@ -6,147 +6,159 @@
   <title>RecoverIQ — Reinsurance Leakage & Audit Workbench</title>
   <style>
     :root {
-      --bg: #0b0f19;
-      --card-bg: #111827;
-      --card-border: #1f2937;
-      --accent: #38bdf8;
-      --text: #f3f4f6;
-      --text-muted: #9ca3af;
-      --success: #34d399;
-      --warning: #fbbf24;
-      --danger: #f87171;
-      --purple: #c084fc;
+      /* EXL Enterprise Brand Palette: Orange, White, Blue */
+      --bg: #F7F8FA;
+      --card-bg: #FFFFFF;
+      --card-border: #E2E8F0;
+      --text: #0F172A;
+      --text-muted: #64748B;
+      --exl-orange: #F36F21;
+      --exl-blue: #1E40AF;
+      --exl-blue-light: #2563EB;
+      --success: #10B981;
+      --warning: #F59E0B;
+      --danger: #EF4444;
+      --purple: #1E40AF;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
     body { background-color: var(--bg); color: var(--text); padding: 24px; }
     .container { max-width: 1400px; margin: 0 auto; }
     
     /* Header */
-    header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--card-border); padding-bottom: 18px; margin-bottom: 24px; }
-    .logo-area h1 { font-size: 1.8rem; font-weight: 800; background: linear-gradient(135deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .logo-area p { font-size: 0.85rem; color: var(--text-muted); }
-    .badge-demo { background: rgba(56, 189, 248, 0.15); color: var(--accent); border: 1px solid rgba(56, 189, 248, 0.3); padding: 6px 14px; border-radius: 9999px; font-size: 0.8rem; font-weight: 600; }
+    header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--card-border); padding-bottom: 18px; margin-bottom: 24px; }
+    .logo-area h1 { font-size: 2rem; font-weight: 800; color: var(--exl-blue); display: flex; align-items: center; gap: 8px; }
+    .logo-area h1 span.highlight { color: var(--exl-orange); }
+    .logo-area p { font-size: 0.88rem; color: var(--text-muted); margin-top: 2px; }
+    .badge-demo { background: rgba(243, 111, 33, 0.1); color: var(--exl-orange); border: 1px solid rgba(243, 111, 33, 0.3); padding: 6px 14px; border-radius: 9999px; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.05em; }
 
     /* KPI Summary Cards */
     .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-bottom: 24px; }
-    .kpi-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 10px; padding: 18px; }
-    .kpi-label { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; }
-    .kpi-val { font-size: 1.8rem; font-weight: 800; color: #fff; }
+    .kpi-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 8px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.03); border-top: 4px solid var(--exl-blue); }
+    .kpi-card.kpi-orange { border-top-color: var(--exl-orange); }
+    .kpi-card.kpi-green { border-top-color: var(--success); }
+    .kpi-label { font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 6px; font-weight: 600; }
+    .kpi-val { font-size: 1.85rem; font-weight: 800; color: var(--text); }
     .kpi-sub { font-size: 0.75rem; color: var(--text-muted); margin-top: 4px; }
+    .val-orange { color: var(--exl-orange); }
     .val-green { color: var(--success); }
     .val-red { color: var(--danger); }
-    .val-blue { color: var(--accent); }
+    .val-blue { color: var(--exl-blue); }
 
     /* Pipeline Nav */
     .pipeline-tabs { display: flex; gap: 8px; margin-bottom: 20px; border-bottom: 1px solid var(--card-border); padding-bottom: 10px; overflow-x: auto; }
-    .tab-btn { background: transparent; border: 1px solid transparent; color: var(--text-muted); padding: 10px 18px; border-radius: 8px; cursor: pointer; font-size: 0.9rem; font-weight: 600; display: flex; align-items: center; gap: 8px; transition: all 0.2s; }
-    .tab-btn.active { background: #1e293b; color: #fff; border-color: var(--accent); }
-    .tab-btn:hover:not(.active) { color: #fff; background: rgba(255,255,255,0.03); }
+    .tab-btn { background: #FFFFFF; border: 1px solid var(--card-border); color: var(--text-muted); padding: 10px 20px; border-radius: 6px; cursor: pointer; font-size: 0.9rem; font-weight: 600; display: flex; align-items: center; gap: 8px; transition: all 0.2s; box-shadow: 0 1px 3px rgba(0,0,0,0.02); }
+    .tab-btn.active { background: #FFFFFF; color: var(--exl-orange); border-color: var(--exl-orange); box-shadow: 0 2px 6px rgba(243, 111, 33, 0.15); font-weight: 700; }
+    .tab-btn:hover:not(.active) { color: var(--exl-blue); background: #F8FAFC; }
 
     /* Filter Bar */
     .filter-bar { display: flex; gap: 12px; margin-bottom: 16px; align-items: center; flex-wrap: wrap; }
-    .filter-btn { background: var(--card-bg); border: 1px solid var(--card-border); color: var(--text-muted); padding: 6px 14px; border-radius: 6px; font-size: 0.8rem; cursor: pointer; }
-    .filter-btn.active { background: var(--accent); color: #0b0f19; font-weight: 700; border-color: var(--accent); }
-    .search-input { background: var(--card-bg); border: 1px solid var(--card-border); color: #fff; padding: 7px 14px; border-radius: 6px; font-size: 0.85rem; flex: 1; max-width: 320px; }
+    .filter-btn { background: var(--card-bg); border: 1px solid var(--card-border); color: var(--text-muted); padding: 7px 16px; border-radius: 6px; font-size: 0.8rem; cursor: pointer; font-weight: 600; }
+    .filter-btn.active { background: var(--exl-blue); color: #FFFFFF; font-weight: 700; border-color: var(--exl-blue); }
+    .filter-btn:hover:not(.active) { background: #F1F5F9; color: var(--text); }
+    .search-input { background: #FFFFFF; border: 1px solid var(--card-border); color: var(--text); padding: 8px 14px; border-radius: 6px; font-size: 0.85rem; flex: 1; max-width: 320px; box-shadow: inset 0 1px 2px rgba(0,0,0,0.03); }
+    .search-input:focus { outline: none; border-color: var(--exl-blue); }
 
     /* Table */
-    .table-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 10px; overflow-x: auto; }
+    .table-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 8px; overflow-x: auto; box-shadow: 0 2px 8px rgba(0,0,0,0.03); }
     table { width: 100%; border-collapse: collapse; font-size: 0.85rem; text-align: left; }
-    th { background: rgba(255,255,255,0.03); padding: 12px 16px; color: var(--text-muted); font-weight: 600; border-bottom: 1px solid var(--card-border); }
-    td { padding: 12px 16px; border-bottom: 1px solid #1a2234; color: var(--text); }
-    tr:hover { background: rgba(255,255,255,0.02); }
-    .pill { display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 700; }
-    .pill-missed { background: rgba(248, 113, 113, 0.2); color: var(--danger); border: 1px solid rgba(248, 113, 113, 0.4); }
-    .pill-under { background: rgba(251, 191, 36, 0.2); color: var(--warning); border: 1px solid rgba(251, 191, 36, 0.4); }
-    .pill-unpaid { background: rgba(192, 132, 252, 0.2); color: var(--purple); border: 1px solid rgba(192, 132, 252, 0.4); }
-    .pill-excluded { background: rgba(148, 163, 184, 0.2); color: #cbd5e1; border: 1px solid #64748b; }
-    .pill-clean { background: rgba(52, 211, 153, 0.15); color: var(--success); }
+    th { background: #F8FAFC; padding: 12px 16px; color: var(--text-muted); font-weight: 700; border-bottom: 2px solid var(--card-border); text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.05em; }
+    td { padding: 14px 16px; border-bottom: 1px solid var(--card-border); color: var(--text); }
+    tr:hover { background: #F8FAFC; }
+    .pill { display: inline-block; padding: 4px 10px; border-radius: 4px; font-size: 0.72rem; font-weight: 700; }
+    .pill-missed { background: rgba(239, 68, 68, 0.1); color: var(--danger); border: 1px solid rgba(239, 68, 68, 0.3); }
+    .pill-under { background: rgba(243, 111, 33, 0.12); color: var(--exl-orange); border: 1px solid rgba(243, 111, 33, 0.3); }
+    .pill-unpaid { background: rgba(30, 64, 175, 0.1); color: var(--exl-blue); border: 1px solid rgba(30, 64, 175, 0.3); }
+    .pill-excluded { background: rgba(100, 116, 139, 0.1); color: #475569; border: 1px solid #cbd5e1; }
+    .pill-clean { background: rgba(16, 185, 129, 0.1); color: var(--success); border: 1px solid rgba(16, 185, 129, 0.3); }
 
-    .btn-audit { background: rgba(56, 189, 248, 0.15); border: 1px solid var(--accent); color: var(--accent); padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; cursor: pointer; font-weight: 600; }
-    .btn-audit:hover { background: var(--accent); color: #0b0f19; }
+    .btn-audit { background: var(--exl-blue); border: 1px solid var(--exl-blue); color: #FFFFFF; padding: 6px 12px; border-radius: 4px; font-size: 0.75rem; cursor: pointer; font-weight: 600; transition: all 0.2s; }
+    .btn-audit:hover { background: var(--exl-blue-light); }
 
     /* Modal / Drawer */
-    .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.75); z-index: 100; justify-content: center; align-items: center; }
-    .modal-box { background: #131b2e; border: 1px solid #2d3748; border-radius: 12px; width: 90%; max-width: 1000px; max-height: 90vh; overflow-y: auto; padding: 24px; box-shadow: 0 10px 40px rgba(0,0,0,0.5); }
-    .modal-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #1f2937; padding-bottom: 14px; margin-bottom: 18px; }
+    .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(2px); z-index: 100; justify-content: center; align-items: center; }
+    .modal-box { background: #FFFFFF; border: 1px solid var(--card-border); border-radius: 10px; width: 90%; max-width: 1050px; max-height: 90vh; overflow-y: auto; padding: 28px; box-shadow: 0 20px 50px rgba(0,0,0,0.15); }
+    .modal-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--card-border); padding-bottom: 16px; margin-bottom: 20px; }
     .modal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-    .evidence-pane { background: #0c1222; border: 1px solid #1e293b; border-radius: 8px; padding: 16px; }
-    .evidence-pane h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 10px; }
-    .audit-step { font-size: 0.85rem; color: #cbd5e1; margin-bottom: 6px; padding-left: 8px; border-left: 2px solid var(--accent); }
-    .modal-actions { display: flex; justify-content: flex-end; gap: 12px; margin-top: 24px; border-top: 1px solid #1f2937; padding-top: 16px; }
-    .btn-action { padding: 8px 18px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; cursor: pointer; }
-    .btn-confirm { background: var(--success); color: #0b0f19; border: none; }
-    .btn-dispute { background: rgba(248, 113, 113, 0.2); color: var(--danger); border: 1px solid var(--danger); }
+    .evidence-pane { background: #F8FAFC; border: 1px solid var(--card-border); border-radius: 8px; padding: 18px; }
+    .evidence-pane h4 { font-size: 0.95rem; color: var(--exl-blue); margin-bottom: 12px; font-weight: 700; }
+    .audit-step { font-size: 0.85rem; color: #334155; margin-bottom: 8px; padding-left: 10px; border-left: 3px solid var(--exl-orange); line-height: 1.5; }
+    .modal-actions { display: flex; justify-content: flex-end; gap: 12px; margin-top: 24px; border-top: 1px solid var(--card-border); padding-top: 18px; }
+    .btn-action { padding: 9px 20px; border-radius: 6px; font-size: 0.85rem; font-weight: 700; cursor: pointer; transition: all 0.2s; }
+    .btn-confirm { background: var(--success); color: #FFFFFF; border: none; }
+    .btn-confirm:hover { background: #059669; }
+    .btn-dispute { background: #FFFFFF; color: var(--danger); border: 1px solid var(--danger); }
+    .btn-dispute:hover { background: #FEF2F2; }
 
-    /* Workflow Flowchart Styles (Signature CyberRiskInsurance Style) */
+    /* Workflow Flowchart Styles (EXL Enterprise Signature Style) */
     .wf-node {
-      background: #111827;
-      border: 1px solid #1f2937;
-      border-radius: 10px;
-      padding: 14px 18px;
+      background: #FFFFFF;
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 16px 20px;
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 16px;
       width: 100%;
       cursor: pointer;
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
     }
     .wf-node:hover {
       transform: translateY(-2px);
-      border-color: var(--accent);
-      box-shadow: 0 8px 24px rgba(56, 189, 248, 0.15);
+      border-color: var(--exl-blue);
+      box-shadow: 0 8px 20px rgba(30, 64, 175, 0.08);
     }
     .wf-highlight {
-      border-color: rgba(192, 132, 252, 0.4);
-      background: linear-gradient(135deg, #131b2e 0%, #17153b 100%);
+      border-color: rgba(30, 64, 175, 0.3);
+      background: #F8FAFC;
     }
     .wf-node.active-stream {
-      border-color: #f26a21;
-      box-shadow: 0 0 0 2px #f26a21, 0 8px 24px rgba(242, 106, 33, 0.3);
+      border-color: var(--exl-orange) !important;
+      box-shadow: 0 0 0 2px var(--exl-orange), 0 8px 24px rgba(243, 111, 33, 0.2) !important;
       animation: pulseNode 1.5s infinite;
     }
     .wf-node.done-stream {
-      border-color: var(--success);
-      box-shadow: 0 0 0 1px var(--success), 0 4px 12px rgba(16, 185, 129, 0.15);
+      border-color: var(--success) !important;
+      box-shadow: 0 0 0 1px var(--success), 0 4px 12px rgba(16, 185, 129, 0.1) !important;
     }
     @keyframes pulseNode {
-      0% { box-shadow: 0 0 0 0 rgba(242, 106, 33, 0.7); }
-      70% { box-shadow: 0 0 0 10px rgba(242, 106, 33, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(242, 106, 33, 0); }
+      0% { box-shadow: 0 0 0 0 rgba(243, 111, 33, 0.6); }
+      70% { box-shadow: 0 0 0 8px rgba(243, 111, 33, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(243, 111, 33, 0); }
     }
     .wf-icon {
-      width: 42px;
-      height: 42px;
+      width: 44px;
+      height: 44px;
       border-radius: 8px;
-      background: rgba(255,255,255,0.05);
+      background: rgba(30, 64, 175, 0.08);
+      color: var(--exl-blue);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.3rem;
+      font-size: 1.35rem;
       flex-shrink: 0;
     }
     .wf-body { flex: 1; text-align: left; }
-    .wf-title { font-size: 0.95rem; font-weight: 700; color: #fff; margin-bottom: 2px; }
-    .wf-desc { font-size: 0.75rem; color: var(--text-muted); }
+    .wf-title { font-size: 0.95rem; font-weight: 700; color: var(--text); margin-bottom: 3px; }
+    .wf-desc { font-size: 0.78rem; color: var(--text-muted); }
     .wf-status {
       font-size: 0.72rem;
       font-weight: 700;
-      padding: 4px 10px;
+      padding: 5px 12px;
       border-radius: 4px;
-      background: rgba(255,255,255,0.04);
+      background: #F1F5F9;
       color: var(--text-muted);
-      border: 1px solid rgba(255,255,255,0.08);
+      border: 1px solid var(--card-border);
       white-space: nowrap;
     }
-    .wf-status.status-active { background: #fff7ed; color: #c2410c; border-color: #fed7aa; }
-    .wf-status.status-done { background: rgba(52, 211, 153, 0.15); color: var(--success); border-color: rgba(52, 211, 153, 0.3); }
+    .wf-status.status-active { background: #FFF7ED; color: #C2410C; border-color: #FED7AA; }
+    .wf-status.status-done { background: rgba(16, 185, 129, 0.12); color: #059669; border-color: rgba(16, 185, 129, 0.3); }
 
     .wf-connector-line {
       width: 2px;
       height: 24px;
-      background: linear-gradient(180deg, var(--card-border) 0%, var(--accent) 50%, var(--card-border) 100%);
-      opacity: 0.6;
+      background: linear-gradient(180deg, var(--card-border) 0%, var(--exl-blue) 50%, var(--card-border) 100%);
+      opacity: 0.7;
     }
   </style>
 </head>
@@ -203,23 +215,23 @@
 
   <!-- VIEW: AGENTIC WORKFLOW FLOWCHART (STREAMING) -->
   <div id="view-workflow">
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; background: #131b2e; padding: 14px 20px; border-radius: 10px; border: 1px solid var(--card-border);">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; background: #FFFFFF; padding: 14px 20px; border-radius: 10px; border: 1px solid var(--card-border); box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
       <div>
-        <h3 style="font-size: 1.1rem; color: #fff; display: flex; align-items: center; gap: 8px;">
-          <span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--success); box-shadow: 0 0 8px var(--success);"></span>
+        <h3 style="font-size: 1.1rem; color: var(--text); display: flex; align-items: center; gap: 8px;">
+          <span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--exl-orange); box-shadow: 0 0 8px rgba(243, 111, 33, 0.6);"></span>
           Autonomous Multi-Agent Reinsurance Pipeline (Interactive Flowchart)
         </h3>
         <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 2px;">
           Live telemetry stream visualizing data flow between Groq LLM agents, deterministic engines, and human sign-off.
         </p>
       </div>
-      <button id="btn-stream-pipeline" class="btn-action" style="background: linear-gradient(135deg, #38bdf8, #818cf8); color: #0b0f19; font-weight: 700; border: none;" onclick="startLivePipelineStream()">
+      <button id="btn-stream-pipeline" class="btn-action" style="background: var(--exl-orange); color: #FFFFFF; font-weight: 700; border: none; box-shadow: 0 2px 8px rgba(243, 111, 33, 0.3);" onclick="startLivePipelineStream()">
         ▶ Run Live Pipeline Stream
       </button>
     </div>
 
     <!-- Interactive Node Graph Container -->
-    <div class="workflow-canvas" style="position: relative; background: radial-gradient(circle at 50% 50%, #151f38 0%, #0b0f19 100%); border: 1px solid var(--card-border); border-radius: 12px; padding: 40px 20px; min-height: 520px; display: flex; flex-direction: column; gap: 30px; align-items: center;">
+    <div class="workflow-canvas" style="position: relative; background: #FFFFFF; border: 1px solid var(--card-border); border-radius: 12px; padding: 40px 20px; min-height: 520px; display: flex; flex-direction: column; gap: 30px; align-items: center; box-shadow: 0 2px 12px rgba(0,0,0,0.03);">
       
       <!-- Stage 1: Input Ingestion Nodes -->
       <div style="display: flex; gap: 24px; justify-content: center; width: 100%; max-width: 1000px;">
@@ -256,9 +268,9 @@
       <!-- Stage 2: Agent A (Treaty Policy Intelligence) -->
       <div style="width: 100%; max-width: 480px;">
         <div class="wf-node wf-highlight" id="node-agent-a" onclick="inspectNode('agent-a')">
-          <div class="wf-icon" style="background: rgba(192, 132, 252, 0.2); color: var(--purple);">🤖</div>
+          <div class="wf-icon" style="background: rgba(30, 64, 175, 0.1); color: var(--exl-blue);">🤖</div>
           <div class="wf-body">
-            <div class="wf-title" style="color: var(--purple);">Agent 1: Treaty Policy Intelligence</div>
+            <div class="wf-title" style="color: var(--exl-blue);">Agent 1: Treaty Policy Intelligence</div>
             <div class="wf-desc">Groq LLM (GPT-OSS 120B) · Structured JSON Schema Extraction</div>
           </div>
           <div class="wf-status" id="status-agent-a">Ready for Stream</div>
@@ -270,7 +282,7 @@
       <!-- Stage 3: Calculation & 3-Way Reconciliation Engines (Parallel) -->
       <div style="display: flex; gap: 24px; justify-content: center; width: 100%; max-width: 900px;">
         <div class="wf-node" id="node-engine-calc" onclick="inspectNode('engine-calc')">
-          <div class="wf-icon" style="background: rgba(56, 189, 248, 0.2); color: var(--accent);">🧮</div>
+          <div class="wf-icon" style="background: rgba(30, 64, 175, 0.1); color: var(--exl-blue);">🧮</div>
           <div class="wf-body">
             <div class="wf-title">Recovery Calculation Engine</div>
             <div class="wf-desc">Deterministic Reinsurance Ontology (XOL, Aggregations, Kitty)</div>
@@ -279,7 +291,7 @@
         </div>
 
         <div class="wf-node" id="node-engine-reconcile" onclick="inspectNode('engine-reconcile')">
-          <div class="wf-icon" style="background: rgba(251, 191, 36, 0.2); color: var(--warning);">⚖️</div>
+          <div class="wf-icon" style="background: rgba(243, 111, 33, 0.12); color: var(--exl-orange);">⚖️</div>
           <div class="wf-body">
             <div class="wf-title">3-Way Reconciliation Engine</div>
             <div class="wf-desc">Entitlement vs Billed vs Broker BDX Cross-Match</div>
@@ -293,9 +305,9 @@
       <!-- Stage 4: Agent B (Audit & Legal Demand) -->
       <div style="width: 100%; max-width: 480px;">
         <div class="wf-node wf-highlight" id="node-agent-b" onclick="inspectNode('agent-b')">
-          <div class="wf-icon" style="background: rgba(192, 132, 252, 0.2); color: var(--purple);">📝</div>
+          <div class="wf-icon" style="background: rgba(30, 64, 175, 0.1); color: var(--exl-blue);">📝</div>
           <div class="wf-body">
-            <div class="wf-title" style="color: var(--purple);">Agent 2: Audit & Demand Brief Generator</div>
+            <div class="wf-title" style="color: var(--exl-blue);">Agent 2: Audit & Demand Brief Generator</div>
             <div class="wf-desc">Groq LLM (GPT-OSS 120B) · Ceded Loss Proof-of-Loss Notice</div>
           </div>
           <div class="wf-status" id="status-agent-b">Ready for Stream</div>
@@ -307,7 +319,7 @@
       <!-- Stage 5: Human In The Loop Output -->
       <div style="width: 100%; max-width: 480px;">
         <div class="wf-node" id="node-human-review" onclick="inspectNode('human-review')">
-          <div class="wf-icon" style="background: rgba(52, 211, 153, 0.2); color: var(--success);">👤</div>
+          <div class="wf-icon" style="background: rgba(16, 185, 129, 0.12); color: var(--success);">👤</div>
           <div class="wf-body">
             <div class="wf-title" style="color: var(--success);">Analyst Workbench & Sign-Off</div>
             <div class="wf-desc">Human-in-the-loop: Confirm & Send Billing Notice to Broker</div>
@@ -319,12 +331,12 @@
     </div>
 
     <!-- Telemetry Log Drawer -->
-    <div style="margin-top: 16px; background: #0c1222; border: 1px solid var(--card-border); border-radius: 8px; padding: 16px;">
+    <div style="margin-top: 16px; background: #0F172A; border: 1px solid #1E293B; border-radius: 8px; padding: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-        <span style="font-size: 0.8rem; font-weight: 700; color: var(--accent); text-transform: uppercase;">📡 Live Agent Telemetry Stream</span>
-        <span id="telemetry-step-count" style="font-size: 0.75rem; color: var(--text-muted);">Step: Idle</span>
+        <span style="font-size: 0.8rem; font-weight: 700; color: var(--exl-orange); text-transform: uppercase;">📡 Live Agent Telemetry Stream</span>
+        <span id="telemetry-step-count" style="font-size: 0.75rem; color: #94A3B8;">Step: Idle</span>
       </div>
-      <div id="telemetry-log" style="font-family: monospace; font-size: 0.8rem; color: #cbd5e1; max-height: 120px; overflow-y: auto; line-height: 1.6;">
+      <div id="telemetry-log" style="font-family: monospace; font-size: 0.8rem; color: #E2E8F0; max-height: 120px; overflow-y: auto; line-height: 1.6;">
         System ready. Click "▶ Run Live Pipeline Stream" to watch autonomous agent execution.
       </div>
     </div>
@@ -400,17 +412,17 @@
   <div class="modal-box">
     <div class="modal-header">
       <div>
-        <h3 id="modal-title" style="color: #fff; font-size: 1.2rem;">Claim Audit Evidence</h3>
+        <h3 id="modal-title" style="color: var(--text); font-size: 1.25rem; font-weight: 700;">Claim Audit Evidence</h3>
         <p id="modal-subtitle" style="font-size: 0.8rem; color: var(--text-muted);"></p>
       </div>
-      <button onclick="closeModal()" style="background: none; border: none; color: #fff; font-size: 1.5rem; cursor: pointer;">&times;</button>
+      <button onclick="closeModal()" style="background: none; border: none; color: var(--text-muted); font-size: 1.5rem; cursor: pointer; padding: 4px 8px;">&times;</button>
     </div>
 
     <div class="modal-grid">
       <!-- Left: Treaty & Citation -->
       <div class="evidence-pane">
         <h4>📄 Treaty Contract Clause & Citation</h4>
-        <div id="modal-treaty-citation" style="font-size: 0.85rem; color: #cbd5e1; line-height: 1.7;"></div>
+        <div id="modal-treaty-citation" style="font-size: 0.85rem; color: var(--text); line-height: 1.7;"></div>
       </div>
 
       <!-- Right: Math Audit Trail -->
@@ -425,35 +437,35 @@
       <h4>⚖️ 3-Way Reconciliation & Broker Bordereau (BDX) Verification</h4>
       <div style="display: flex; justify-content: space-around; text-align: center; margin-top: 10px;">
         <div>
-          <div style="font-size: 0.75rem; color: var(--text-muted);">CALCULATED ENTITLEMENT</div>
-          <div id="modal-entitled" style="font-size: 1.3rem; font-weight: 800; color: var(--accent);">$0.00</div>
+          <div style="font-size: 0.75rem; color: var(--text-muted); font-weight: 600;">CALCULATED ENTITLEMENT</div>
+          <div id="modal-entitled" style="font-size: 1.3rem; font-weight: 800; color: var(--exl-blue);">$0.00</div>
         </div>
         <div>
-          <div style="font-size: 0.75rem; color: var(--text-muted);">INSURER BILLED</div>
-          <div id="modal-billed" style="font-size: 1.3rem; font-weight: 800; color: #fff;">$0.00</div>
+          <div style="font-size: 0.75rem; color: var(--text-muted); font-weight: 600;">INSURER BILLED</div>
+          <div id="modal-billed" style="font-size: 1.3rem; font-weight: 800; color: var(--text);">$0.00</div>
         </div>
         <div>
-          <div style="font-size: 0.75rem; color: var(--text-muted);">BROKER BDX REMITTED</div>
-          <div id="modal-recv" style="font-size: 1.3rem; font-weight: 800; color: #fff;">$0.00</div>
+          <div style="font-size: 0.75rem; color: var(--text-muted); font-weight: 600;">BROKER BDX REMITTED</div>
+          <div id="modal-recv" style="font-size: 1.3rem; font-weight: 800; color: var(--text);">$0.00</div>
         </div>
         <div>
-          <div style="font-size: 0.75rem; color: var(--text-muted);">TOTAL IDENTIFIED LEAKAGE</div>
+          <div style="font-size: 0.75rem; color: var(--text-muted); font-weight: 600;">TOTAL IDENTIFIED LEAKAGE</div>
           <div id="modal-leakage" style="font-size: 1.3rem; font-weight: 800; color: var(--danger);">$0.00</div>
         </div>
       </div>
     </div>
 
     <!-- Agent B: Live LLM Reinsurance Demand Notice Container -->
-    <div id="llm-notice-container" style="display: none; margin-top: 16px; background: #0c1222; border: 1px solid var(--purple); border-radius: 8px; padding: 16px;">
+    <div id="llm-notice-container" style="display: none; margin-top: 16px; background: #F8FAFC; border: 1px solid var(--exl-blue); border-radius: 8px; padding: 18px; box-shadow: 0 4px 12px rgba(30,64,175,0.06);">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-        <h4 style="color: var(--purple); font-size: 0.95rem;">🤖 Groq LLM Ceded Recovery Demand Brief (Agent B)</h4>
-        <span id="llm-model-badge" style="font-size: 0.7rem; background: rgba(192, 132, 252, 0.2); color: var(--purple); padding: 3px 8px; border-radius: 4px;"></span>
+        <h4 style="color: var(--exl-blue); font-size: 0.95rem; font-weight: 700;">🤖 Groq LLM Ceded Recovery Demand Brief (Agent B)</h4>
+        <span id="llm-model-badge" style="font-size: 0.7rem; background: rgba(30, 64, 175, 0.1); color: var(--exl-blue); padding: 3px 8px; border-radius: 4px; font-weight: 600; border: 1px solid rgba(30,64,175,0.2);"></span>
       </div>
-      <div id="llm-notice-body" style="font-size: 0.85rem; color: #cbd5e1; line-height: 1.6; white-space: pre-wrap;"></div>
+      <div id="llm-notice-body" style="font-family: 'SF Mono', Monaco, Menlo, Consolas, monospace; font-size: 0.85rem; color: var(--text); line-height: 1.6; white-space: pre-wrap; background: #FFFFFF; border: 1px solid var(--card-border); border-radius: 6px; padding: 14px;"></div>
     </div>
 
     <div class="modal-actions">
-      <button class="btn-action" style="background: rgba(192, 132, 252, 0.2); color: var(--purple); border: 1px solid var(--purple);" id="btn-generate-notice" onclick="generateLLMNotice()">🤖 Generate LLM Recovery Notice</button>
+      <button class="btn-action" style="background: #FFF7ED; color: var(--exl-orange); border: 1px solid var(--exl-orange);" id="btn-generate-notice" onclick="generateLLMNotice()">🤖 Generate LLM Recovery Notice</button>
       <button class="btn-action btn-dispute" onclick="disputeClaim()">Flag for Legal Review</button>
       <button class="btn-action btn-confirm" onclick="confirmRecovery()">✓ Confirm & Approve</button>
     </div>
@@ -681,19 +693,19 @@ function renderTreaties() {
     card.className = 'kpi-card';
     card.innerHTML = `
       <div class="kpi-label">${t.treaty_id} · ${t.type}</div>
-      <div style="font-size: 1.1rem; font-weight: 700; color: #fff; margin: 4px 0;">${t.treaty_name}</div>
+      <div style="font-size: 1.1rem; font-weight: 700; color: var(--text); margin: 4px 0;">${t.treaty_name}</div>
       <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 8px;">Reinsurer: <strong>${t.reinsurer}</strong> | Broker: <strong>${t.broker}</strong></p>
-      <div style="font-size: 0.85rem; line-height: 1.6;">
-        <div>Retention: <strong>$${t.retention_usd.toLocaleString()}</strong> <span style="color: var(--accent);">(Page ${t.citation_page_retention})</span></div>
-        <div>Limit: <strong>$${t.limit_usd.toLocaleString()}</strong> <span style="color: var(--accent);">(Page ${t.citation_page_limit})</span></div>
-        <div>Hours Clause: <strong>${t.hours_clause} Hours</strong> <span style="color: var(--accent);">(Page ${t.citation_page_hours})</span></div>
-        <div style="margin-top: 6px;">Covered: <span style="color: var(--success);">${t.covered_perils.join(', ')}</span></div>
-        <div>Excluded: <span style="color: var(--danger);">${t.excluded_perils.join(', ')}</span></div>
+      <div style="font-size: 0.85rem; line-height: 1.6; color: var(--text);">
+        <div>Retention: <strong>$${t.retention_usd.toLocaleString()}</strong> <span style="color: var(--exl-blue); font-weight: 600;">(Page ${t.citation_page_retention})</span></div>
+        <div>Limit: <strong>$${t.limit_usd.toLocaleString()}</strong> <span style="color: var(--exl-blue); font-weight: 600;">(Page ${t.citation_page_limit})</span></div>
+        <div>Hours Clause: <strong>${t.hours_clause} Hours</strong> <span style="color: var(--exl-blue); font-weight: 600;">(Page ${t.citation_page_hours})</span></div>
+        <div style="margin-top: 6px;">Covered: <span style="color: var(--success); font-weight: 600;">${t.covered_perils.join(', ')}</span></div>
+        <div>Excluded: <span style="color: var(--danger); font-weight: 600;">${t.excluded_perils.join(', ')}</span></div>
       </div>
       <div style="margin-top: 14px;">
-        <button class="btn-audit" onclick="runLiveTreatyExtraction('${t.treaty_id}')">🤖 Run Live LLM Extraction (Groq)</button>
+        <button class="btn-audit" style="background: var(--exl-orange); border-color: var(--exl-orange);" onclick="runLiveTreatyExtraction('${t.treaty_id}')">🤖 Run Live LLM Extraction (Groq)</button>
       </div>
-      <div id="agent-output-${t.treaty_id}" style="display:none; margin-top: 10px; background: #0c1222; padding: 10px; border-radius: 6px; font-size: 0.75rem; border: 1px solid var(--purple);"></div>
+      <div id="agent-output-${t.treaty_id}" style="display:none; margin-top: 10px; background: #F8FAFC; padding: 12px; border-radius: 6px; font-size: 0.8rem; border: 1px solid var(--exl-blue); color: var(--text);"></div>
     `;
     container.appendChild(card);
   });
@@ -702,7 +714,7 @@ function renderTreaties() {
 async function runLiveTreatyExtraction(treatyId) {
   const box = document.getElementById(`agent-output-${treatyId}`);
   box.style.display = 'block';
-  box.innerHTML = '<span style="color: var(--accent);">⏳ Groq Agent analyzing raw legal contract...</span>';
+  box.innerHTML = '<span style="color: var(--exl-blue); font-weight: 600;">⏳ Groq Agent analyzing raw legal contract...</span>';
 
   try {
     const res = await fetch('/api/agent/extract-treaty', {
@@ -712,11 +724,11 @@ async function runLiveTreatyExtraction(treatyId) {
     });
     const data = await res.json();
     box.innerHTML = `
-      <div style="color: var(--purple); font-weight: 700; margin-bottom: 4px;">✓ ${data.extracted_by || 'Groq LLM Agent'}</div>
-      <div>Retention: $${Number(data.retention_usd).toLocaleString()} (Cited Page: ${data.citation_page_retention})</div>
-      <div>Limit: $${Number(data.limit_usd).toLocaleString()} (Cited Page: ${data.citation_page_limit})</div>
-      <div>Covered Perils: ${data.covered_perils ? data.covered_perils.join(', ') : 'N/A'}</div>
-      <div style="margin-top: 4px; font-style: italic; color: #94a3b8;">"${data.clause_excerpt_retention || ''}"</div>
+      <div style="color: var(--exl-blue); font-weight: 700; margin-bottom: 6px;">✓ ${data.extracted_by || 'Groq LLM Agent'}</div>
+      <div style="margin-bottom: 2px;">Retention: <strong>$${Number(data.retention_usd).toLocaleString()}</strong> (Cited Page: ${data.citation_page_retention})</div>
+      <div style="margin-bottom: 2px;">Limit: <strong>$${Number(data.limit_usd).toLocaleString()}</strong> (Cited Page: ${data.citation_page_limit})</div>
+      <div style="margin-bottom: 2px;">Covered Perils: <span style="color: var(--success);">${data.covered_perils ? data.covered_perils.join(', ') : 'N/A'}</span></div>
+      <div style="margin-top: 6px; font-style: italic; color: #475569; border-left: 2px solid var(--exl-orange); padding-left: 8px;">"${data.clause_excerpt_retention || ''}"</div>
     `;
   } catch (err) {
     box.innerHTML = `<span style="color: var(--danger);">Error calling LLM agent: ${err.message}</span>`;

@@ -6,17 +6,18 @@
   <title>RecoverIQ — Project Blueprint & Buildathon Spec</title>
   <style>
     :root {
-      --bg: #0b0f19;
-      --card-bg: #131b2e;
-      --card-border: #1e293b;
-      --accent: #38bdf8;
-      --accent-grad: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
-      --text: #f1f5f9;
-      --text-muted: #94a3b8;
-      --success: #34d399;
-      --warning: #fbbf24;
-      --danger: #f87171;
-      --tag-bg: #1e293b;
+      --bg: #F7F8FA;
+      --card-bg: #FFFFFF;
+      --card-border: #E2E8F0;
+      --exl-orange: #F36F21;
+      --exl-blue: #1E40AF;
+      --exl-blue-light: #2563EB;
+      --text: #0F172A;
+      --text-muted: #64748B;
+      --success: #10B981;
+      --warning: #F59E0B;
+      --danger: #EF4444;
+      --tag-bg: #F1F5F9;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -37,12 +38,13 @@
     }
     .badge {
       display: inline-block;
-      background: rgba(56, 189, 248, 0.15);
-      color: var(--accent);
+      background: #FFF7ED;
+      color: var(--exl-orange);
+      border: 1px solid #FED7AA;
       padding: 4px 12px;
       border-radius: 9999px;
       font-size: 0.8rem;
-      font-weight: 600;
+      font-weight: 700;
       letter-spacing: 0.05em;
       text-transform: uppercase;
       margin-bottom: 12px;
@@ -50,7 +52,7 @@
     h1 {
       font-size: 2.8rem;
       font-weight: 800;
-      background: var(--accent-grad);
+      background: linear-gradient(135deg, var(--exl-blue) 0%, var(--exl-orange) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       margin-bottom: 10px;
@@ -65,13 +67,14 @@
       gap: 15px;
       flex-wrap: wrap;
       margin-top: 20px;
-      padding: 12px 18px;
+      padding: 14px 20px;
       background: var(--card-bg);
       border-radius: 8px;
       border: 1px solid var(--card-border);
       font-size: 0.9rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
     }
-    .team-bar span { color: var(--accent); font-weight: 600; }
+    .team-bar span { color: var(--exl-blue); font-weight: 700; }
 
     .grid-2 {
       display: grid;
@@ -91,12 +94,12 @@
       border: 1px solid var(--card-border);
       border-radius: 12px;
       padding: 24px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.03);
     }
     .card h3 {
       font-size: 1.25rem;
       margin-bottom: 14px;
-      color: #fff;
+      color: var(--text);
       display: flex;
       align-items: center;
       gap: 8px;
@@ -109,21 +112,23 @@
     li { margin-bottom: 8px; }
 
     .definition-box {
-      border-left: 3px solid var(--accent);
-      padding: 12px 16px;
-      background: rgba(255,255,255,0.02);
+      border-left: 4px solid var(--exl-orange);
+      padding: 14px 18px;
+      background: #FFFFFF;
       border-radius: 0 8px 8px 0;
       margin-bottom: 12px;
     }
-    .definition-box strong { color: #fff; font-size: 1.05rem; display: block; }
+    .definition-box strong { color: var(--exl-blue); font-size: 1.05rem; display: block; margin-bottom: 2px; }
     .definition-box span { color: var(--text-muted); font-size: 0.9rem; }
 
     .example-container {
-      background: linear-gradient(180deg, #162035 0%, #111827 100%);
-      border: 1px solid #2563eb40;
+      background: #FFFFFF;
+      border: 1px solid var(--card-border);
+      border-top: 4px solid var(--exl-orange);
       border-radius: 12px;
       padding: 24px;
       margin-bottom: 35px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.03);
     }
     .bars-row {
       display: flex;
@@ -137,12 +142,12 @@
       text-align: center;
     }
     .bar-pill {
-      background: rgba(56, 189, 248, 0.25);
-      border: 1px solid var(--accent);
+      background: #EFF6FF;
+      border: 1px solid #BFDBFE;
       border-radius: 6px;
       padding: 10px 4px;
       font-weight: 700;
-      color: #fff;
+      color: var(--exl-blue);
       font-size: 0.95rem;
       margin-bottom: 8px;
     }
@@ -151,16 +156,17 @@
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      background: rgba(0,0,0,0.3);
+      background: #F8FAFC;
+      border: 1px solid var(--card-border);
       padding: 16px 20px;
       border-radius: 8px;
       margin-top: 15px;
     }
     .calc-stat { text-align: center; }
-    .calc-stat .val { font-size: 1.4rem; font-weight: 800; }
+    .calc-stat .val { font-size: 1.4rem; font-weight: 800; color: var(--text); }
     .calc-stat .lbl { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; }
-    .highlight-red { color: var(--danger); }
-    .highlight-green { color: var(--success); }
+    .highlight-red { color: var(--danger) !important; }
+    .highlight-green { color: var(--success) !important; }
 
     table {
       width: 100%;
@@ -174,9 +180,12 @@
       border-bottom: 1px solid var(--card-border);
     }
     th {
-      background: rgba(255,255,255,0.03);
-      color: #fff;
-      font-weight: 600;
+      background: #F8FAFC;
+      color: var(--text);
+      font-weight: 700;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
     td { color: var(--text-muted); }
 
@@ -195,13 +204,14 @@
       align-items: center;
       gap: 20px;
       position: relative;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
     }
     .step-num {
       width: 44px;
       height: 44px;
       border-radius: 50%;
-      background: var(--accent-grad);
-      color: #0b0f19;
+      background: var(--exl-blue);
+      color: #FFFFFF;
       font-weight: 800;
       display: flex;
       align-items: center;
@@ -209,30 +219,33 @@
       font-size: 1.2rem;
       flex-shrink: 0;
     }
-    .step-body h4 { color: #fff; font-size: 1.1rem; margin-bottom: 4px; }
+    .step-body h4 { color: var(--text); font-size: 1.1rem; margin-bottom: 4px; }
     .step-body p { color: var(--text-muted); font-size: 0.9rem; }
     .tag {
       margin-left: auto;
       font-size: 0.75rem;
       padding: 4px 10px;
       border-radius: 6px;
-      font-weight: 600;
+      font-weight: 700;
     }
-    .tag-ai { background: rgba(168, 85, 247, 0.2); color: #c084fc; border: 1px solid #a855f750; }
-    .tag-rules { background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid #38bdf850; }
-    .tag-human { background: rgba(52, 211, 153, 0.2); color: #34d399; border: 1px solid #34d39950; }
+    .tag-ai { background: #EFF6FF; color: var(--exl-blue); border: 1px solid #BFDBFE; }
+    .tag-rules { background: #FFF7ED; color: #C2410C; border: 1px solid #FED7AA; }
+    .tag-human { background: rgba(16, 185, 129, 0.1); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3); }
 
     .feedback-box {
-      background: #1e1b4b25;
-      border: 1px solid #6366f160;
+      background: #FFFFFF;
+      border: 1px solid var(--card-border);
+      border-left: 4px solid var(--exl-blue);
       border-radius: 12px;
       padding: 24px;
       margin-top: 30px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
     }
     .feedback-box h2 {
-      color: #a5b4fc;
-      font-size: 1.5rem;
+      color: var(--exl-blue);
+      font-size: 1.4rem;
       margin-bottom: 15px;
+      font-weight: 700;
     }
   </style>
 </head>
@@ -274,7 +287,7 @@
 
   <!-- MOTIVATING EXAMPLE -->
   <div class="example-container">
-    <h3 style="color: #fff; margin-bottom: 8px;">The Core Problem: How Reinsurance Money Gets Missed</h3>
+    <h3 style="color: var(--text); font-size: 1.25rem; font-weight: 700; margin-bottom: 8px;">The Core Problem: How Reinsurance Money Gets Missed</h3>
     <p style="color: var(--text-muted); font-size: 0.95rem;">
       One windstorm damages four insured warehouses. Each claim is below the $2.0M retention threshold, so none is individually sent for review. But the treaty aggregates the entire storm as one single event — together the claims breach retention!
     </p>
@@ -444,21 +457,21 @@
     <h2>🎯 Senior Reviewer Guidance (Sayan Ghosh & Biswajit Das)</h2>
     <div class="grid-2">
       <div>
-        <h4 style="color: #fff; margin-bottom: 8px;">1. Strategic Nuance</h4>
+        <h4 style="color: var(--exl-blue); margin-bottom: 8px; font-weight: 700;">1. Strategic Nuance</h4>
         <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 15px;">
           Frame the tool as solving <strong>Leakage from Complex Treaty Interpretation</strong> rather than just "someone forgot to read the paper". Emphasize layers, limits, and multi-broker statements.
         </p>
-        <h4 style="color: #fff; margin-bottom: 8px;">2. Add Realistic Ingestion Files</h4>
+        <h4 style="color: var(--exl-blue); margin-bottom: 8px; font-weight: 700;">2. Add Realistic Ingestion Files</h4>
         <p style="color: var(--text-muted); font-size: 0.9rem;">
           Include <strong>Broker Bordereaux (BDX)</strong> and <strong>Historical Loss Runs / Case Reserves</strong>. This makes the synthetic dataset indistinguishable from enterprise reinsurance operations.
         </p>
       </div>
       <div>
-        <h4 style="color: #fff; margin-bottom: 8px;">3. Breadth over Depth (Pareto 80/20)</h4>
+        <h4 style="color: var(--exl-blue); margin-bottom: 8px; font-weight: 700;">3. Breadth over Depth (Pareto 80/20)</h4>
         <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 15px;">
           Show the complete end-to-end flow cleanly. Don't get stuck on edge cases; demonstrate high confidence, transparent citations, and intuitive visuals.
         </p>
-        <h4 style="color: #fff; margin-bottom: 8px;">4. UI / Pipeline Visualization</h4>
+        <h4 style="color: var(--exl-blue); margin-bottom: 8px; font-weight: 700;">4. UI / Pipeline Visualization</h4>
         <p style="color: var(--text-muted); font-size: 0.9rem;">
           Leverage Shivam's frontend experience to display clear step-by-step progress, evidence side-by-side, and confidence metrics on every dollar calculation.
         </p>
