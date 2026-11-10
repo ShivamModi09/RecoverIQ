@@ -1,7 +1,7 @@
 # RecoverIQ — Senior Leadership & Judges Feedback Analysis
 **EXL AI Buildathon 2026**  
 **Reviewer:** Sayan Ghosh  
-**Engineering Leads:** Shivam Manojkumar Modi, Ashish Chavan, Arin  
+**Engineering Leads:** Ashish Chavan, Shivam Modi, Arin Mangal  
 **Mentor/Project Lead:** Biswajit Das  
 
 ---
