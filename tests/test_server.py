@@ -23,7 +23,7 @@ class TestRecoverIQServer(unittest.TestCase):
         self.handler.path = "/"
         self.handler.do_GET()
         self.handler.send_response.assert_called_with(200)
-        self.handler.send_header.assert_called_with("Content-type", "text/html; charset=utf-8")
+        self.handler.send_header.assert_any_call("Content-type", "text/html; charset=utf-8")
         self.assertTrue(self.handler.wfile.write.called)
 
     def test_get_api_findings(self):

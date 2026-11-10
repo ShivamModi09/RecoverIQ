@@ -44,6 +44,38 @@ class RecoverIQHandler(http.server.SimpleHTTPRequestHandler):
             self.wfile.write(json.dumps(result).encode("utf-8"))
             return
 
+        elif self.path == "/api/reconcile/run":
+            import csv
+            from src.reconciler import ReinsuranceReconciler
+            with open("data/processed/treaties.json") as f:
+                treaties = json.load(f)
+            with open("data/processed/events.json") as f:
+                events = json.load(f)
+            claims = []
+            with open("data/processed/claims_list.csv") as f:
+                for r in csv.DictReader(f):
+                    claims.append(r)
+            bdx_records = []
+            with open("data/processed/broker_bordereau.csv") as f:
+                for r in csv.DictReader(f):
+                    bdx_records.append(r)
+
+            reconciler = ReinsuranceReconciler(treaties, events)
+            findings = reconciler.reconcile_claims(claims, bdx_records)
+            anomalies = [f for f in findings if f.status == "ANOMALY"]
+            total_leakage = sum(f.leakage_amount for f in anomalies)
+
+            self.send_response(200)
+            self.send_header("Content-type", "application/json")
+            self.end_headers()
+            self.wfile.write(json.dumps({
+                "status": "success",
+                "evaluated_claims": len(findings),
+                "anomalies_count": len(anomalies),
+                "total_leakage": round(total_leakage, 2)
+            }).encode("utf-8"))
+            return
+
         elif self.path == "/api/agent/generate-notice":
             cid = req_data.get("claim_id")
             with open("data/processed/reconciliation_results.json") as f:
@@ -70,6 +102,9 @@ class RecoverIQHandler(http.server.SimpleHTTPRequestHandler):
         if self.path == "/" or self.path == "/index.html":
             self.send_response(200)
             self.send_header("Content-type", "text/html; charset=utf-8")
+            self.send_header("Cache-Control", "no-cache, no-store, must-revalidate, max-age=0")
+            self.send_header("Pragma", "no-cache")
+            self.send_header("Expires", "0")
             self.end_headers()
             with open("static/index.html", "rb") as f:
                 self.wfile.write(f.read())

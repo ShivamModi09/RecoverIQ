@@ -177,7 +177,7 @@ Then open your browser to:
 
 1. **⚡ Live Agentic Workflow Stream:**
    - Visualizes the entire autonomous agent graph inspired by Shivam's signature design from CyberRiskInsurance.
-   - Click **"▶ Run Live Pipeline Stream"** to watch the real-time execution telemetry flow from document ingestion to Groq extraction, deterministic math, 3-way reconciliation, and human sign-off.
+   - Click **"▶ Run Live Pipeline Stream"** to watch the real-time node progression flow from document ingestion to Groq extraction, deterministic math, 3-way reconciliation, and human sign-off.
 2. **📋 Audit Workbench & Evidence Pane:**
    - Filter portfolio by leakage category (*Missed Recovery, Under-Billed, Unpaid/Short-Paid, Excluded Peril*).
    - Click **"Audit Evidence"** on any claim to view side-by-side treaty citations, step-by-step math calculation proofs, and broker variance.
@@ -208,7 +208,7 @@ Then open your browser to:
    No, the entire codebase runs exclusively on Python's built-in standard library (`urllib`, `json`, `csv`, `http.server`), requiring zero `pip` installations.
 
 6. **Where is the Groq API key stored and how do I configure it?**  
-   It can be set via the system environment variable `export GROQ_API_KEY="your_key"`, with a fallback default defined in `src/agents/groq_client.py`.
+   It is stored safely in a local `.env` file (copied from `.env.example`, which is listed in `.gitignore` so keys are never committed to GitHub) or passed via system environment variable `export GROQ_API_KEY="your_key"`. `src/agents/groq_client.py` automatically reads `.env` using pure standard library.
 
 7. **How does the 3-way reconciliation algorithm actually match claims, treaties, and broker bordereaux (BDX)?**  
    `src/reconciler.py` aggregates claims by catastrophe event, evaluates treaty excess-of-loss math, and cross-references claim IDs against broker BDX transaction logs to flag any variance between entitled, billed, and remitted dollars.
@@ -257,7 +257,8 @@ Then open your browser to:
 └── docs/
     ├── RecoverIQ_Overview.html      # Interactive Visual Pitch & Architecture Deck
     ├── PROJECT_PITCH_SPEC.md        # Verbatim transcription of original pitch deck
-    └── JUDGES_FEEDBACK_AND_ARCHITECTURE.md # Analysis of feedback from Sayan Ghosh
+    ├── JUDGES_FEEDBACK_AND_ARCHITECTURE.md # Analysis of feedback from Sayan Ghosh
+    └── meeting-transcript.txt       # Verbatim transcript of architecture review with Sayan Ghosh
 ```
 
 ---
