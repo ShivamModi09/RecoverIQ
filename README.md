@@ -30,6 +30,17 @@ A single windstorm damages four insured warehouses:
 
 ---
 
+### 💡 Ideas Incorporated from Senior Judge Review (Sayan Ghosh)
+Following our review with senior leadership, we incorporated Sayan's exact guidance into RecoverIQ:
+1. **Reframed from "Missed Files" to "Complex Interpretation Leakage":** Missed money rarely happens because someone forgot to open a document; it happens because layered treaties, attachment points, and peril exclusions are miscalculated or misinterpreted.
+2. **Added Broker Bordereaux (BDX):** Introduced 300 realistic broker transaction statement records, reflecting that enterprise reinsurance placements and cash remittances flow through intermediaries (Aon, Guy Carpenter).
+3. **Cumulative Loss Runs & Capacity ("Kitty") Tracking:** Implemented historical loss tracking (`treaty_loss_run.json`) to monitor cumulative claims against treaty limits and prevent over-recovery against exhausted capacity.
+4. **Modular Multi-Agent Architecture:** Decomposed the solution into distinct, visible sequential agents (`Treaty Policy Intelligence` → `Deterministic Calculator` → `3-Way Reconciler` → `Audit Brief Generator`) with live step telemetry.
+5. **Confidence Scores on Every Dollar:** Added explicit, auditable confidence percentages (e.g. 98%) justifying every derived recovery gap.
+6. **"Breadth over Depth" (Pareto 80/20):** Prioritized demonstrating the complete end-to-end data pipeline with high visual clarity and transparent evidence rather than getting trapped in obscure legal edge cases.
+
+---
+
 ## 🏗️ Core Architecture & Pipeline
 
 ```
