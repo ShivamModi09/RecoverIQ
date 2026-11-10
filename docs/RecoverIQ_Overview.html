@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RecoverIQ — Project Blueprint & Buildathon Spec</title>
+  <style>
+    :root {
+      --bg: #0b0f19;
+      --card-bg: #131b2e;
+      --card-border: #1e293b;
+      --accent: #38bdf8;
+      --accent-grad: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --success: #34d399;
+      --warning: #fbbf24;
+      --danger: #f87171;
+      --tag-bg: #1e293b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    header {
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 30px;
+      margin-bottom: 40px;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(56, 189, 248, 0.15);
+      color: var(--accent);
+      padding: 4px 12px;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      background: var(--accent-grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 10px;
+    }
+    .subtitle {
+      font-size: 1.25rem;
+      color: var(--text-muted);
+      max-width: 800px;
+    }
+    .team-bar {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+      padding: 12px 18px;
+      background: var(--card-bg);
+      border-radius: 8px;
+      border: 1px solid var(--card-border);
+      font-size: 0.9rem;
+    }
+    .team-bar span { color: var(--accent); font-weight: 600; }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      margin-bottom: 35px;
+    }
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-bottom: 35px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    }
+    .card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 14px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .card p, .card li {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+    ul { list-style-position: inside; }
+    li { margin-bottom: 8px; }
+
+    .definition-box {
+      border-left: 3px solid var(--accent);
+      padding: 12px 16px;
+      background: rgba(255,255,255,0.02);
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 12px;
+    }
+    .definition-box strong { color: #fff; font-size: 1.05rem; display: block; }
+    .definition-box span { color: var(--text-muted); font-size: 0.9rem; }
+
+    .example-container {
+      background: linear-gradient(180deg, #162035 0%, #111827 100%);
+      border: 1px solid #2563eb40;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 35px;
+    }
+    .bars-row {
+      display: flex;
+      align-items: flex-end;
+      gap: 16px;
+      margin: 20px 0;
+      padding-top: 10px;
+    }
+    .bar-item {
+      flex: 1;
+      text-align: center;
+    }
+    .bar-pill {
+      background: rgba(56, 189, 248, 0.25);
+      border: 1px solid var(--accent);
+      border-radius: 6px;
+      padding: 10px 4px;
+      font-weight: 700;
+      color: #fff;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+    }
+    .bar-label { font-size: 0.8rem; color: var(--text-muted); }
+    .calc-summary {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      background: rgba(0,0,0,0.3);
+      padding: 16px 20px;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+    .calc-stat { text-align: center; }
+    .calc-stat .val { font-size: 1.4rem; font-weight: 800; }
+    .calc-stat .lbl { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; }
+    .highlight-red { color: var(--danger); }
+    .highlight-green { color: var(--success); }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 0.9rem;
+    }
+    th, td {
+      padding: 12px 14px;
+      text-align: left;
+      border-bottom: 1px solid var(--card-border);
+    }
+    th {
+      background: rgba(255,255,255,0.03);
+      color: #fff;
+      font-weight: 600;
+    }
+    td { color: var(--text-muted); }
+
+    .agent-pipeline {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin: 25px 0;
+    }
+    .agent-step {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 18px 22px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      position: relative;
+    }
+    .step-num {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--accent-grad);
+      color: #0b0f19;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+    .step-body h4 { color: #fff; font-size: 1.1rem; margin-bottom: 4px; }
+    .step-body p { color: var(--text-muted); font-size: 0.9rem; }
+    .tag {
+      margin-left: auto;
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+    .tag-ai { background: rgba(168, 85, 247, 0.2); color: #c084fc; border: 1px solid #a855f750; }
+    .tag-rules { background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid #38bdf850; }
+    .tag-human { background: rgba(52, 211, 153, 0.2); color: #34d399; border: 1px solid #34d39950; }
+
+    .feedback-box {
+      background: #1e1b4b25;
+      border: 1px solid #6366f160;
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 30px;
+    }
+    .feedback-box h2 {
+      color: #a5b4fc;
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <div class="badge">EXL AI Buildathon 2026 · MVP Track</div>
+    <h1>RecoverIQ</h1>
+    <div class="subtitle">
+      Find the reinsurance money an insurer was owed on past claims but never billed, and show verifiable evidence for every dollar.
+    </div>
+    <div class="team-bar">
+      <div>Project Lead / Mentor: <span>Biswajit Das</span></div>
+      <div>Engineering Team: <span>Shivam Manojkumar Modi, Ashish Chavan, Arin</span></div>
+      <div>Senior Reviewer / Judge: <span>Sayan Ghosh</span></div>
+      <div>Demo Target: <span>17 November 2026</span></div>
+    </div>
+  </header>
+
+  <!-- 4 KEY TERMS -->
+  <div class="grid-4">
+    <div class="card definition-box">
+      <strong>Treaty</strong>
+      <span>Contract in which a reinsurer agrees to pay part of the insurer's large losses.</span>
+    </div>
+    <div class="card definition-box">
+      <strong>Retention</strong>
+      <span>The amount of each loss the insurer pays itself before the reinsurer pays.</span>
+    </div>
+    <div class="card definition-box">
+      <strong>Limit</strong>
+      <span>The maximum dollar amount the reinsurer will pay for one loss event.</span>
+    </div>
+    <div class="card definition-box">
+      <strong>Recovery</strong>
+      <span>The money the primary insurer claims back from the reinsurer.</span>
+    </div>
+  </div>
+
+  <!-- MOTIVATING EXAMPLE -->
+  <div class="example-container">
+    <h3 style="color: #fff; margin-bottom: 8px;">The Core Problem: How Reinsurance Money Gets Missed</h3>
+    <p style="color: var(--text-muted); font-size: 0.95rem;">
+      One windstorm damages four insured warehouses. Each claim is below the $2.0M retention threshold, so none is individually sent for review. But the treaty aggregates the entire storm as one single event — together the claims breach retention!
+    </p>
+
+    <div class="bars-row">
+      <div class="bar-item">
+        <div class="bar-pill">$0.9M</div>
+        <div class="bar-label">Claim 1</div>
+      </div>
+      <div class="bar-item">
+        <div class="bar-pill">$0.8M</div>
+        <div class="bar-label">Claim 2</div>
+      </div>
+      <div class="bar-item">
+        <div class="bar-pill">$0.7M</div>
+        <div class="bar-label">Claim 3</div>
+      </div>
+      <div class="bar-item">
+        <div class="bar-pill">$0.5M</div>
+        <div class="bar-label">Claim 4</div>
+      </div>
+    </div>
+
+    <div class="calc-summary">
+      <div class="calc-stat">
+        <div class="val">$2.9M</div>
+        <div class="lbl">Storm Aggregate Loss</div>
+      </div>
+      <div class="calc-stat">
+        <div class="val">$2.0M</div>
+        <div class="lbl">Treaty Retention</div>
+      </div>
+      <div class="calc-stat">
+        <div class="val highlight-green">$0.9M</div>
+        <div class="lbl">Reinsurer Truly Owes</div>
+      </div>
+      <div class="calc-stat">
+        <div class="val highlight-red">$0</div>
+        <div class="lbl">Actually Billed (100% Leakage)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VALUE PROPOSITION & SCOPE -->
+  <div class="grid-2">
+    <div class="card">
+      <h3>💡 Why It Is Worth Solving</h3>
+      <ul>
+        <li><strong>Straight to bottom-line:</strong> Recovered money is pure profit. Unbilled recoveries are lost forever.</li>
+        <li><strong>Highly manual today:</strong> Analysts manually reconcile complex multi-page treaties in spreadsheets.</li>
+        <li><strong>Common leaks:</strong> Event aggregations missed, claims expanding after billing, un-reconciled broker payments.</li>
+        <li><strong>Low client friction:</strong> Historical batch analysis — does not touch fragile live core systems.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🎯 MVP Scope Boundaries</h3>
+      <ul>
+        <li><strong>Included:</strong> Commercial property claims (1-year batch), Excess of Loss (XOL) treaties, automated page-cited clause extraction, deterministic recovery calculator, 3-way variance reconciliation screen.</li>
+        <li><strong>Excluded:</strong> Real-time new claims intake, core system direct billing APIs, contested legal litigation.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SYNTHETIC DATASET -->
+  <div class="card" style="margin-bottom: 35px;">
+    <h3>📊 Synthetic Data Specification</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Asset</th>
+          <th>Format</th>
+          <th>Size</th>
+          <th>Description & Planted Anomalies</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Treaty Documents</strong></td>
+          <td>PDF</td>
+          <td>3 Treaties</td>
+          <td>Contracts with retentions, limits, covered perils (e.g., wind/fire covered, flood excluded).</td>
+        </tr>
+        <tr>
+          <td><strong>Claims List</strong></td>
+          <td>Spreadsheet</td>
+          <td>~150 Claims</td>
+          <td>Claim numbers, dates, locations, perils, incurred loss, status, and Cat Event IDs.</td>
+        </tr>
+        <tr>
+          <td><strong>Claim Reports</strong></td>
+          <td>PDF</td>
+          <td>~25 Reports</td>
+          <td>Adjuster loss descriptions for all key claims and anomaly cases.</td>
+        </tr>
+        <tr>
+          <td><strong>Events List</strong></td>
+          <td>Spreadsheet</td>
+          <td>~12 Events</td>
+          <td>Catastrophe storms and multi-property fires aggregating across locations.</td>
+        </tr>
+        <tr>
+          <td><strong>Broker Bordereaux (BDX)</strong></td>
+          <td>Spreadsheet</td>
+          <td>~300 Rows</td>
+          <td>Broker transaction statements of ceded losses, billed amounts, and received remittances.</td>
+        </tr>
+        <tr>
+          <td><strong>Loss Runs / Reserves</strong></td>
+          <td>Spreadsheet</td>
+          <td>Historical</td>
+          <td>Cumulative paid claims and case reserves to track remaining treaty capacity ("kitty").</td>
+        </tr>
+        <tr>
+          <td><strong>Master Answer Key</strong></td>
+          <td>JSON / CSV</td>
+          <td>1 Key</td>
+          <td>Ground truth of all ~30 planted anomalies (missed, under-billed, unpaid, wrong peril) for benchmark scoring.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- MULTI-AGENT ARCHITECTURE -->
+  <div class="card" style="margin-bottom: 35px;">
+    <h3>🤖 Modular Agentic Architecture (Per Senior Judge Feedback)</h3>
+    <div class="agent-pipeline">
+      <div class="agent-step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h4>Treaty Policy Intelligence Agent</h4>
+          <p>Ingests contracts, parses clauses, and extracts structured attachment points, limits, covered/excluded perils, and layer definitions with exact page numbers.</p>
+        </div>
+        <span class="tag tag-ai">GenAI Agent</span>
+      </div>
+
+      <div class="agent-step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h4>Recovery Calculation Engine</h4>
+          <p>Deterministic domain engine pre-fed with reinsurance ontology: Excess of Loss, Quota Share, aggregate loss runs, remaining treaty capacity ("kitty balance"), and confidence scores.</p>
+        </div>
+        <span class="tag tag-rules">Deterministic Engine</span>
+      </div>
+
+      <div class="agent-step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h4>Reconciliation & Leakage Detection Agent</h4>
+          <p>Executes 3-way reconciliation: Treaty Entitlement vs. Insurer Billed vs. Broker Bordereau (BDX) Received. Flags missed claims, under-billing, and short payments.</p>
+        </div>
+        <span class="tag tag-rules">Rule + Match Engine</span>
+      </div>
+
+      <div class="agent-step">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <h4>Analyst Audit & Explanation Workbench (UI)</h4>
+          <p>Side-by-side evidence pane: treaty excerpt on left, mathematical proof in center, broker variance on right. Human analyst can confirm or dispute each finding.</p>
+        </div>
+        <span class="tag tag-human">Human-In-The-Loop</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- JUDGES FEEDBACK & ACTION PLAN -->
+  <div class="feedback-box">
+    <h2>🎯 Senior Reviewer Guidance (Sayan Ghosh & Biswajit Das)</h2>
+    <div class="grid-2">
+      <div>
+        <h4 style="color: #fff; margin-bottom: 8px;">1. Strategic Nuance</h4>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 15px;">
+          Frame the tool as solving <strong>Leakage from Complex Treaty Interpretation</strong> rather than just "someone forgot to read the paper". Emphasize layers, limits, and multi-broker statements.
+        </p>
+        <h4 style="color: #fff; margin-bottom: 8px;">2. Add Realistic Ingestion Files</h4>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">
+          Include <strong>Broker Bordereaux (BDX)</strong> and <strong>Historical Loss Runs / Case Reserves</strong>. This makes the synthetic dataset indistinguishable from enterprise reinsurance operations.
+        </p>
+      </div>
+      <div>
+        <h4 style="color: #fff; margin-bottom: 8px;">3. Breadth over Depth (Pareto 80/20)</h4>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 15px;">
+          Show the complete end-to-end flow cleanly. Don't get stuck on edge cases; demonstrate high confidence, transparent citations, and intuitive visuals.
+        </p>
+        <h4 style="color: #fff; margin-bottom: 8px;">4. UI / Pipeline Visualization</h4>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">
+          Leverage Shivam's frontend experience to display clear step-by-step progress, evidence side-by-side, and confidence metrics on every dollar calculation.
+        </p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
+

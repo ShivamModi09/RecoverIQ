@@ -1,0 +1,301 @@
+bdx_record_id,claim_id,policy_number,treaty_id,broker,transaction_date,transaction_type,gross_loss_reported,billed_amount_usd,remitted_amount_usd,settlement_status,aging_days
+BDX-2025-0001,CLM-2025-011,POL-CP-2025011,TR-2025-PROP-02,Guy Carpenter,2025-09-07,Ceded Billing Notice,2714145.69,942780.13,0.0,Pending Remittance,30
+BDX-2025-0002,CLM-2025-011,POL-CP-2025011,TR-2025-PROP-02,Guy Carpenter,2025-10-07,Cash Remittance,2714145.69,0.0,942780.13,Settled,0
+BDX-2025-0003,CLM-2025-012,POL-CP-2025012,TR-2025-PROP-02,Guy Carpenter,2025-09-07,Ceded Billing Notice,2010375.77,555706.67,0.0,Pending Remittance,30
+BDX-2025-0004,CLM-2025-012,POL-CP-2025012,TR-2025-PROP-02,Guy Carpenter,2025-10-07,Cash Remittance,2010375.77,0.0,555706.67,Settled,0
+BDX-2025-0005,CLM-2025-013,POL-CP-2025013,TR-2025-PROP-02,Guy Carpenter,2025-09-07,Ceded Billing Notice,1653315.41,359323.48,0.0,Pending Remittance,30
+BDX-2025-0006,CLM-2025-013,POL-CP-2025013,TR-2025-PROP-02,Guy Carpenter,2025-10-07,Cash Remittance,1653315.41,0.0,359323.48,Settled,0
+BDX-2025-0007,CLM-2025-014,POL-CP-2025014,TR-2025-PROP-02,Guy Carpenter,2025-09-07,Ceded Billing Notice,2771241.55,974182.85,0.0,Pending Remittance,30
+BDX-2025-0008,CLM-2025-014,POL-CP-2025014,TR-2025-PROP-02,Guy Carpenter,2025-10-07,Cash Remittance,2771241.55,0.0,974182.85,Settled,0
+BDX-2025-0009,CLM-2025-015,POL-CP-2025015,TR-2025-PROP-02,Guy Carpenter,2025-09-07,Ceded Billing Notice,2594597.68,877028.72,0.0,Pending Remittance,30
+BDX-2025-0010,CLM-2025-015,POL-CP-2025015,TR-2025-PROP-02,Guy Carpenter,2025-10-07,Cash Remittance,2594597.68,0.0,877028.72,Settled,0
+BDX-2025-0011,CLM-2025-016,POL-CP-2025016,TR-2025-PROP-02,Guy Carpenter,2025-09-07,Ceded Billing Notice,1618200.3,340010.17,0.0,Pending Remittance,30
+BDX-2025-0012,CLM-2025-016,POL-CP-2025016,TR-2025-PROP-02,Guy Carpenter,2025-10-07,Cash Remittance,1618200.3,0.0,340010.17,Settled,0
+BDX-2025-0013,CLM-2025-017,POL-CP-2025017,TR-2025-PROP-02,Guy Carpenter,2025-09-07,Ceded Billing Notice,2828177.62,1005497.69,0.0,Pending Remittance,30
+BDX-2025-0014,CLM-2025-017,POL-CP-2025017,TR-2025-PROP-02,Guy Carpenter,2025-10-07,Cash Remittance,2828177.62,0.0,1005497.69,Settled,0
+BDX-2025-0015,CLM-2025-018,POL-CP-2025018,TR-2025-PROP-02,Guy Carpenter,2025-09-07,Ceded Billing Notice,2556857.75,856271.76,0.0,Pending Remittance,30
+BDX-2025-0016,CLM-2025-018,POL-CP-2025018,TR-2025-PROP-02,Guy Carpenter,2025-10-07,Cash Remittance,2556857.75,0.0,856271.76,Settled,0
+BDX-2025-0017,CLM-2025-019,POL-CP-2025019,TR-2025-PROP-02,Guy Carpenter,2025-07-10,Ceded Billing Notice,2482295.68,1482295.68,0.0,Pending Remittance,115
+BDX-2025-0018,CLM-2025-020,POL-CP-2025020,TR-2025-PROP-02,Guy Carpenter,2025-07-10,Ceded Billing Notice,1932176.72,932176.72,0.0,Pending Remittance,115
+BDX-2025-0019,CLM-2025-020,POL-CP-2025020,TR-2025-PROP-02,Guy Carpenter,2025-08-09,Cash Remittance,1932176.72,0.0,372870.69,Settled,0
+BDX-2025-0020,CLM-2025-021,POL-CP-2025021,TR-2025-PROP-02,Guy Carpenter,2025-07-10,Ceded Billing Notice,1918253.35,918253.35,0.0,Pending Remittance,115
+BDX-2025-0021,CLM-2025-022,POL-CP-2025022,TR-2025-PROP-02,Guy Carpenter,2025-07-10,Ceded Billing Notice,2252783.41,1252783.41,0.0,Pending Remittance,115
+BDX-2025-0022,CLM-2025-023,POL-CP-2025023,TR-2025-PROP-02,Guy Carpenter,2025-07-10,Ceded Billing Notice,2047164.3,1047164.3,0.0,Pending Remittance,115
+BDX-2025-0023,CLM-2025-023,POL-CP-2025023,TR-2025-PROP-02,Guy Carpenter,2025-08-09,Cash Remittance,2047164.3,0.0,418865.72,Settled,0
+BDX-2025-0024,CLM-2025-024,POL-CP-2025024,TR-2025-PROP-02,Guy Carpenter,2025-07-10,Ceded Billing Notice,1707461.24,707461.24,0.0,Pending Remittance,115
+BDX-2025-0025,CLM-2025-024,POL-CP-2025024,TR-2025-PROP-02,Guy Carpenter,2025-08-09,Cash Remittance,1707461.24,0.0,282984.5,Settled,0
+BDX-2025-0026,CLM-2025-025,POL-CP-2025025,TR-2025-PROP-02,Guy Carpenter,2025-07-10,Ceded Billing Notice,2550523.63,1550523.63,0.0,Pending Remittance,115
+BDX-2025-0027,CLM-2025-025,POL-CP-2025025,TR-2025-PROP-02,Guy Carpenter,2025-08-09,Cash Remittance,2550523.63,0.0,620209.45,Settled,0
+BDX-2025-0028,CLM-2025-026,POL-CP-2025026,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-18,Ceded Billing Notice,2489884.56,489884.56,0.0,Pending Remittance,115
+BDX-2025-0029,CLM-2025-027,POL-CP-2025027,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-18,Ceded Billing Notice,2889894.8,889894.8,0.0,Pending Remittance,115
+BDX-2025-0030,CLM-2025-028,POL-CP-2025028,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-18,Ceded Billing Notice,2428584.43,428584.43,0.0,Pending Remittance,115
+BDX-2025-0031,CLM-2025-029,POL-CP-2025029,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-18,Ceded Billing Notice,2785079.56,785079.56,0.0,Pending Remittance,115
+BDX-2025-0032,CLM-2025-030,POL-CP-2025030,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-18,Ceded Billing Notice,3108040.6,1108040.6,0.0,Pending Remittance,115
+BDX-2025-0033,CLM-2025-031,POL-CP-2025031,TR-2025-PROP-02,Guy Carpenter,2025-07-30,Ceded Billing Notice,2496256.09,1496256.09,0.0,Pending Remittance,30
+BDX-2025-0034,CLM-2025-031,POL-CP-2025031,TR-2025-PROP-02,Guy Carpenter,2025-08-29,Cash Remittance,2496256.09,0.0,1496256.09,Settled,0
+BDX-2025-0035,CLM-2025-032,POL-CP-2025032,TR-2025-PROP-02,Guy Carpenter,2025-07-30,Ceded Billing Notice,1227273.18,227273.18,0.0,Pending Remittance,30
+BDX-2025-0036,CLM-2025-032,POL-CP-2025032,TR-2025-PROP-02,Guy Carpenter,2025-08-29,Cash Remittance,1227273.18,0.0,227273.18,Settled,0
+BDX-2025-0037,CLM-2025-033,POL-CP-2025033,TR-2025-PROP-02,Guy Carpenter,2025-07-30,Ceded Billing Notice,1978424.46,978424.46,0.0,Pending Remittance,30
+BDX-2025-0038,CLM-2025-033,POL-CP-2025033,TR-2025-PROP-02,Guy Carpenter,2025-08-29,Cash Remittance,1978424.46,0.0,978424.46,Settled,0
+BDX-2025-0039,CLM-2025-034,POL-CP-2025034,TR-2025-PROP-02,Guy Carpenter,2025-07-30,Ceded Billing Notice,1934972.64,934972.64,0.0,Pending Remittance,30
+BDX-2025-0040,CLM-2025-034,POL-CP-2025034,TR-2025-PROP-02,Guy Carpenter,2025-08-29,Cash Remittance,1934972.64,0.0,934972.64,Settled,0
+BDX-2025-0041,CLM-2025-035,POL-CP-2025035,TR-2025-PROP-02,Guy Carpenter,2025-07-30,Ceded Billing Notice,2494569.93,1494569.93,0.0,Pending Remittance,30
+BDX-2025-0042,CLM-2025-035,POL-CP-2025035,TR-2025-PROP-02,Guy Carpenter,2025-08-29,Cash Remittance,2494569.93,0.0,1494569.93,Settled,0
+BDX-2025-0043,CLM-2025-036,POL-CP-2025036,TR-2025-PROP-02,Guy Carpenter,2025-07-30,Ceded Billing Notice,2305091.58,1305091.58,0.0,Pending Remittance,30
+BDX-2025-0044,CLM-2025-036,POL-CP-2025036,TR-2025-PROP-02,Guy Carpenter,2025-08-29,Cash Remittance,2305091.58,0.0,1305091.58,Settled,0
+BDX-2025-0045,CLM-2025-037,POL-CP-2025037,TR-2025-PROP-02,Guy Carpenter,2025-07-30,Ceded Billing Notice,2054394.52,1054394.52,0.0,Pending Remittance,30
+BDX-2025-0046,CLM-2025-037,POL-CP-2025037,TR-2025-PROP-02,Guy Carpenter,2025-08-29,Cash Remittance,2054394.52,0.0,1054394.52,Settled,0
+BDX-2025-0047,CLM-2025-038,POL-CP-2025038,TR-2025-PROP-02,Guy Carpenter,2025-07-30,Ceded Billing Notice,1256173.04,256173.04,0.0,Pending Remittance,30
+BDX-2025-0048,CLM-2025-038,POL-CP-2025038,TR-2025-PROP-02,Guy Carpenter,2025-08-29,Cash Remittance,1256173.04,0.0,256173.04,Settled,0
+BDX-2025-0049,CLM-2025-039,POL-CP-2025039,TR-2025-PROP-02,Guy Carpenter,2025-07-30,Ceded Billing Notice,1104543.44,104543.44,0.0,Pending Remittance,30
+BDX-2025-0050,CLM-2025-039,POL-CP-2025039,TR-2025-PROP-02,Guy Carpenter,2025-08-29,Cash Remittance,1104543.44,0.0,104543.44,Settled,0
+BDX-2025-0051,CLM-2025-040,POL-CP-2025040,TR-2025-PROP-02,Guy Carpenter,2025-07-30,Ceded Billing Notice,2166747.08,1166747.08,0.0,Pending Remittance,30
+BDX-2025-0052,CLM-2025-040,POL-CP-2025040,TR-2025-PROP-02,Guy Carpenter,2025-08-29,Cash Remittance,2166747.08,0.0,1166747.08,Settled,0
+BDX-2025-0053,CLM-2025-041,POL-CP-2025041,TR-2025-PROP-02,Guy Carpenter,2025-07-30,Ceded Billing Notice,2278337.09,1278337.09,0.0,Pending Remittance,30
+BDX-2025-0054,CLM-2025-041,POL-CP-2025041,TR-2025-PROP-02,Guy Carpenter,2025-08-29,Cash Remittance,2278337.09,0.0,1278337.09,Settled,0
+BDX-2025-0055,CLM-2025-042,POL-CP-2025042,TR-2025-PROP-02,Guy Carpenter,2025-07-30,Ceded Billing Notice,1313974.98,313974.98,0.0,Pending Remittance,30
+BDX-2025-0056,CLM-2025-042,POL-CP-2025042,TR-2025-PROP-02,Guy Carpenter,2025-08-29,Cash Remittance,1313974.98,0.0,313974.98,Settled,0
+BDX-2025-0057,CLM-2025-043,POL-CP-2025043,TR-2025-PROP-02,Guy Carpenter,2025-07-30,Ceded Billing Notice,2434899.65,1434899.65,0.0,Pending Remittance,30
+BDX-2025-0058,CLM-2025-043,POL-CP-2025043,TR-2025-PROP-02,Guy Carpenter,2025-08-29,Cash Remittance,2434899.65,0.0,1434899.65,Settled,0
+BDX-2025-0059,CLM-2025-044,POL-CP-2025044,TR-2025-PROP-02,Guy Carpenter,2025-07-30,Ceded Billing Notice,1938522.42,938522.42,0.0,Pending Remittance,30
+BDX-2025-0060,CLM-2025-044,POL-CP-2025044,TR-2025-PROP-02,Guy Carpenter,2025-08-29,Cash Remittance,1938522.42,0.0,938522.42,Settled,0
+BDX-2025-0061,CLM-2025-045,POL-CP-2025045,TR-2025-PROP-02,Guy Carpenter,2025-07-30,Ceded Billing Notice,2400738.06,1400738.06,0.0,Pending Remittance,30
+BDX-2025-0062,CLM-2025-045,POL-CP-2025045,TR-2025-PROP-02,Guy Carpenter,2025-08-29,Cash Remittance,2400738.06,0.0,1400738.06,Settled,0
+BDX-2025-0063,CLM-2025-046,POL-CP-2025046,TR-2025-PROP-02,Guy Carpenter,2025-07-30,Ceded Billing Notice,1181095.23,181095.23,0.0,Pending Remittance,30
+BDX-2025-0064,CLM-2025-046,POL-CP-2025046,TR-2025-PROP-02,Guy Carpenter,2025-08-29,Cash Remittance,1181095.23,0.0,181095.23,Settled,0
+BDX-2025-0065,CLM-2025-047,POL-CP-2025047,TR-2025-PROP-02,Guy Carpenter,2025-07-30,Ceded Billing Notice,1219914.83,219914.83,0.0,Pending Remittance,30
+BDX-2025-0066,CLM-2025-047,POL-CP-2025047,TR-2025-PROP-02,Guy Carpenter,2025-08-29,Cash Remittance,1219914.83,0.0,219914.83,Settled,0
+BDX-2025-0067,CLM-2025-048,POL-CP-2025048,TR-2025-PROP-02,Guy Carpenter,2025-07-30,Ceded Billing Notice,2172168.2,1172168.2,0.0,Pending Remittance,30
+BDX-2025-0068,CLM-2025-048,POL-CP-2025048,TR-2025-PROP-02,Guy Carpenter,2025-08-29,Cash Remittance,2172168.2,0.0,1172168.2,Settled,0
+BDX-2025-0069,CLM-2025-049,POL-CP-2025049,TR-2025-PROP-02,Guy Carpenter,2025-07-30,Ceded Billing Notice,2425588.15,1425588.15,0.0,Pending Remittance,30
+BDX-2025-0070,CLM-2025-049,POL-CP-2025049,TR-2025-PROP-02,Guy Carpenter,2025-08-29,Cash Remittance,2425588.15,0.0,1425588.15,Settled,0
+BDX-2025-0071,CLM-2025-050,POL-CP-2025050,TR-2025-PROP-02,Guy Carpenter,2025-07-30,Ceded Billing Notice,2321406.26,1321406.26,0.0,Pending Remittance,30
+BDX-2025-0072,CLM-2025-050,POL-CP-2025050,TR-2025-PROP-02,Guy Carpenter,2025-08-29,Cash Remittance,2321406.26,0.0,1321406.26,Settled,0
+BDX-2025-0073,CLM-2025-051,POL-CP-2025051,TR-2025-PROP-02,Guy Carpenter,2025-07-30,Ceded Billing Notice,2157371.28,1157371.28,0.0,Pending Remittance,30
+BDX-2025-0074,CLM-2025-051,POL-CP-2025051,TR-2025-PROP-02,Guy Carpenter,2025-08-29,Cash Remittance,2157371.28,0.0,1157371.28,Settled,0
+BDX-2025-0075,CLM-2025-052,POL-CP-2025052,TR-2025-PROP-02,Guy Carpenter,2025-07-30,Ceded Billing Notice,1658589.22,658589.22,0.0,Pending Remittance,30
+BDX-2025-0076,CLM-2025-052,POL-CP-2025052,TR-2025-PROP-02,Guy Carpenter,2025-08-29,Cash Remittance,1658589.22,0.0,658589.22,Settled,0
+BDX-2025-0077,CLM-2025-053,POL-CP-2025053,TR-2025-PROP-02,Guy Carpenter,2025-07-30,Ceded Billing Notice,1713340.12,713340.12,0.0,Pending Remittance,30
+BDX-2025-0078,CLM-2025-053,POL-CP-2025053,TR-2025-PROP-02,Guy Carpenter,2025-08-29,Cash Remittance,1713340.12,0.0,713340.12,Settled,0
+BDX-2025-0079,CLM-2025-054,POL-CP-2025054,TR-2025-PROP-02,Guy Carpenter,2025-07-30,Ceded Billing Notice,1447067.86,447067.86,0.0,Pending Remittance,30
+BDX-2025-0080,CLM-2025-054,POL-CP-2025054,TR-2025-PROP-02,Guy Carpenter,2025-08-29,Cash Remittance,1447067.86,0.0,447067.86,Settled,0
+BDX-2025-0081,CLM-2025-055,POL-CP-2025055,TR-2025-PROP-02,Guy Carpenter,2025-07-30,Ceded Billing Notice,1923632.21,923632.21,0.0,Pending Remittance,30
+BDX-2025-0082,CLM-2025-055,POL-CP-2025055,TR-2025-PROP-02,Guy Carpenter,2025-08-29,Cash Remittance,1923632.21,0.0,923632.21,Settled,0
+BDX-2025-0083,CLM-2025-056,POL-CP-2025056,TR-2025-PROP-02,Guy Carpenter,2025-07-30,Ceded Billing Notice,1110067.17,110067.17,0.0,Pending Remittance,30
+BDX-2025-0084,CLM-2025-056,POL-CP-2025056,TR-2025-PROP-02,Guy Carpenter,2025-08-29,Cash Remittance,1110067.17,0.0,110067.17,Settled,0
+BDX-2025-0085,CLM-2025-057,POL-CP-2025057,TR-2025-PROP-02,Guy Carpenter,2025-07-30,Ceded Billing Notice,1420518.5,420518.5,0.0,Pending Remittance,30
+BDX-2025-0086,CLM-2025-057,POL-CP-2025057,TR-2025-PROP-02,Guy Carpenter,2025-08-29,Cash Remittance,1420518.5,0.0,420518.5,Settled,0
+BDX-2025-0087,CLM-2025-058,POL-CP-2025058,TR-2025-PROP-02,Guy Carpenter,2025-07-30,Ceded Billing Notice,1199200.29,199200.29,0.0,Pending Remittance,30
+BDX-2025-0088,CLM-2025-058,POL-CP-2025058,TR-2025-PROP-02,Guy Carpenter,2025-08-29,Cash Remittance,1199200.29,0.0,199200.29,Settled,0
+BDX-2025-0089,CLM-2025-059,POL-CP-2025059,TR-2025-PROP-02,Guy Carpenter,2025-07-30,Ceded Billing Notice,1399931.53,399931.53,0.0,Pending Remittance,30
+BDX-2025-0090,CLM-2025-059,POL-CP-2025059,TR-2025-PROP-02,Guy Carpenter,2025-08-29,Cash Remittance,1399931.53,0.0,399931.53,Settled,0
+BDX-2025-0091,CLM-2025-060,POL-CP-2025060,TR-2025-PROP-02,Guy Carpenter,2025-07-30,Ceded Billing Notice,1761739.44,761739.44,0.0,Pending Remittance,30
+BDX-2025-0092,CLM-2025-060,POL-CP-2025060,TR-2025-PROP-02,Guy Carpenter,2025-08-29,Cash Remittance,1761739.44,0.0,761739.44,Settled,0
+BDX-2025-0093,CLM-2025-134,POL-CP-2025134,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,135135.92,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0094,CLM-2025-125,POL-CP-2025125,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,236946.62,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0095,CLM-2025-062,POL-CP-2025062,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,358238.88,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0096,CLM-2025-071,POL-CP-2025071,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,835125.29,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0097,CLM-2025-113,POL-CP-2025113,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,141557.26,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0098,CLM-2025-020,POL-CP-2025020,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,1932176.72,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0099,CLM-2025-074,POL-CP-2025074,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,184673.24,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0100,CLM-2025-061,POL-CP-2025061,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,215656.63,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0101,CLM-2025-070,POL-CP-2025070,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,403580.23,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0102,CLM-2025-086,POL-CP-2025086,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,448708.4,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0103,CLM-2025-082,POL-CP-2025082,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,414725.68,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0104,CLM-2025-139,POL-CP-2025139,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,108330.57,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0105,CLM-2025-021,POL-CP-2025021,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,1918253.35,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0106,CLM-2025-036,POL-CP-2025036,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,2305091.58,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0107,CLM-2025-039,POL-CP-2025039,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,1104543.44,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0108,CLM-2025-060,POL-CP-2025060,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,1761739.44,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0109,CLM-2025-099,POL-CP-2025099,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,98474.59,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0110,CLM-2025-040,POL-CP-2025040,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,2166747.08,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0111,CLM-2025-055,POL-CP-2025055,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,1923632.21,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0112,CLM-2025-017,POL-CP-2025017,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,2828177.62,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0113,CLM-2025-107,POL-CP-2025107,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,342861.81,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0114,CLM-2025-105,POL-CP-2025105,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,156103.59,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0115,CLM-2025-085,POL-CP-2025085,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,447785.38,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0116,CLM-2025-139,POL-CP-2025139,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,108330.57,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0117,CLM-2025-120,POL-CP-2025120,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,231862.66,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0118,CLM-2025-107,POL-CP-2025107,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,342861.81,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0119,CLM-2025-016,POL-CP-2025016,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,1618200.3,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0120,CLM-2025-053,POL-CP-2025053,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,1713340.12,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0121,CLM-2025-108,POL-CP-2025108,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,57435.91,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0122,CLM-2025-100,POL-CP-2025100,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,218272.06,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0123,CLM-2025-150,POL-CP-2025150,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,279744.11,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0124,CLM-2025-006,POL-CP-2025006,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,2183765.46,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0125,CLM-2025-148,POL-CP-2025148,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,273096.63,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0126,CLM-2025-098,POL-CP-2025098,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,51063.71,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0127,CLM-2025-123,POL-CP-2025123,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,256057.14,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0128,CLM-2025-002,POL-CP-2025002,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,800000.0,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0129,CLM-2025-091,POL-CP-2025091,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,52346.93,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0130,CLM-2025-077,POL-CP-2025077,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,849866.8,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0131,CLM-2025-100,POL-CP-2025100,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,218272.06,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0132,CLM-2025-108,POL-CP-2025108,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,57435.91,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0133,CLM-2025-138,POL-CP-2025138,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,186624.85,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0134,CLM-2025-140,POL-CP-2025140,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,169895.86,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0135,CLM-2025-057,POL-CP-2025057,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,1420518.5,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0136,CLM-2025-125,POL-CP-2025125,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,236946.62,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0137,CLM-2025-057,POL-CP-2025057,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,1420518.5,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0138,CLM-2025-070,POL-CP-2025070,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,403580.23,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0139,CLM-2025-112,POL-CP-2025112,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,109871.85,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0140,CLM-2025-125,POL-CP-2025125,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,236946.62,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0141,CLM-2025-008,POL-CP-2025008,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,1562365.57,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0142,CLM-2025-100,POL-CP-2025100,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,218272.06,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0143,CLM-2025-087,POL-CP-2025087,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,517741.93,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0144,CLM-2025-104,POL-CP-2025104,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,113022.96,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0145,CLM-2025-043,POL-CP-2025043,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,2434899.65,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0146,CLM-2025-120,POL-CP-2025120,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,231862.66,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0147,CLM-2025-033,POL-CP-2025033,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,1978424.46,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0148,CLM-2025-137,POL-CP-2025137,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,63864.12,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0149,CLM-2025-007,POL-CP-2025007,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,2008591.01,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0150,CLM-2025-101,POL-CP-2025101,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,213677.09,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0151,CLM-2025-145,POL-CP-2025145,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,346367.74,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0152,CLM-2025-007,POL-CP-2025007,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,2008591.01,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0153,CLM-2025-022,POL-CP-2025022,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,2252783.41,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0154,CLM-2025-110,POL-CP-2025110,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,97759.35,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0155,CLM-2025-035,POL-CP-2025035,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,2494569.93,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0156,CLM-2025-119,POL-CP-2025119,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,228971.38,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0157,CLM-2025-047,POL-CP-2025047,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,1219914.83,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0158,CLM-2025-013,POL-CP-2025013,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,1653315.41,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0159,CLM-2025-067,POL-CP-2025067,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,810802.78,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0160,CLM-2025-098,POL-CP-2025098,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,51063.71,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0161,CLM-2025-084,POL-CP-2025084,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,257656.78,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0162,CLM-2025-055,POL-CP-2025055,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,1923632.21,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0163,CLM-2025-117,POL-CP-2025117,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,149344.96,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0164,CLM-2025-084,POL-CP-2025084,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,257656.78,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0165,CLM-2025-087,POL-CP-2025087,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,517741.93,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0166,CLM-2025-098,POL-CP-2025098,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,51063.71,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0167,CLM-2025-072,POL-CP-2025072,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,907218.69,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0168,CLM-2025-108,POL-CP-2025108,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,57435.91,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0169,CLM-2025-065,POL-CP-2025065,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,216683.36,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0170,CLM-2025-021,POL-CP-2025021,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,1918253.35,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0171,CLM-2025-121,POL-CP-2025121,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,319851.42,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0172,CLM-2025-005,POL-CP-2025005,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,2189860.6,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0173,CLM-2025-139,POL-CP-2025139,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,108330.57,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0174,CLM-2025-014,POL-CP-2025014,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,2771241.55,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0175,CLM-2025-090,POL-CP-2025090,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,662079.73,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0176,CLM-2025-058,POL-CP-2025058,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,1199200.29,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0177,CLM-2025-018,POL-CP-2025018,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,2556857.75,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0178,CLM-2025-011,POL-CP-2025011,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,2714145.69,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0179,CLM-2025-008,POL-CP-2025008,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,1562365.57,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0180,CLM-2025-064,POL-CP-2025064,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,400280.52,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0181,CLM-2025-052,POL-CP-2025052,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,1658589.22,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0182,CLM-2025-006,POL-CP-2025006,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,2183765.46,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0183,CLM-2025-040,POL-CP-2025040,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,2166747.08,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0184,CLM-2025-062,POL-CP-2025062,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,358238.88,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0185,CLM-2025-033,POL-CP-2025033,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,1978424.46,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0186,CLM-2025-122,POL-CP-2025122,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,262635.59,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0187,CLM-2025-030,POL-CP-2025030,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,3108040.6,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0188,CLM-2025-145,POL-CP-2025145,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,346367.74,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0189,CLM-2025-056,POL-CP-2025056,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,1110067.17,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0190,CLM-2025-120,POL-CP-2025120,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,231862.66,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0191,CLM-2025-066,POL-CP-2025066,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,417037.03,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0192,CLM-2025-095,POL-CP-2025095,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,111079.19,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0193,CLM-2025-043,POL-CP-2025043,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,2434899.65,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0194,CLM-2025-030,POL-CP-2025030,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,3108040.6,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0195,CLM-2025-042,POL-CP-2025042,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,1313974.98,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0196,CLM-2025-080,POL-CP-2025080,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,154301.35,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0197,CLM-2025-028,POL-CP-2025028,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,2428584.43,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0198,CLM-2025-149,POL-CP-2025149,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,275533.04,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0199,CLM-2025-007,POL-CP-2025007,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,2008591.01,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0200,CLM-2025-080,POL-CP-2025080,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,154301.35,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0201,CLM-2025-148,POL-CP-2025148,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,273096.63,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0202,CLM-2025-097,POL-CP-2025097,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,240285.33,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0203,CLM-2025-102,POL-CP-2025102,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,215757.53,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0204,CLM-2025-051,POL-CP-2025051,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,2157371.28,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0205,CLM-2025-020,POL-CP-2025020,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,1932176.72,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0206,CLM-2025-063,POL-CP-2025063,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,635827.16,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0207,CLM-2025-027,POL-CP-2025027,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,2889894.8,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0208,CLM-2025-078,POL-CP-2025078,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,885877.65,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0209,CLM-2025-031,POL-CP-2025031,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,2496256.09,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0210,CLM-2025-145,POL-CP-2025145,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,346367.74,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0211,CLM-2025-011,POL-CP-2025011,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,2714145.69,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0212,CLM-2025-089,POL-CP-2025089,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,371488.57,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0213,CLM-2025-137,POL-CP-2025137,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,63864.12,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0214,CLM-2025-110,POL-CP-2025110,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,97759.35,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0215,CLM-2025-095,POL-CP-2025095,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,111079.19,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0216,CLM-2025-018,POL-CP-2025018,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,2556857.75,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0217,CLM-2025-130,POL-CP-2025130,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,300117.55,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0218,CLM-2025-088,POL-CP-2025088,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,861935.66,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0219,CLM-2025-004,POL-CP-2025004,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,500000.0,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0220,CLM-2025-108,POL-CP-2025108,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,57435.91,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0221,CLM-2025-126,POL-CP-2025126,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,202136.75,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0222,CLM-2025-028,POL-CP-2025028,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,2428584.43,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0223,CLM-2025-111,POL-CP-2025111,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,311650.03,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0224,CLM-2025-093,POL-CP-2025093,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,84628.6,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0225,CLM-2025-118,POL-CP-2025118,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,103570.34,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0226,CLM-2025-040,POL-CP-2025040,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,2166747.08,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0227,CLM-2025-112,POL-CP-2025112,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,109871.85,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0228,CLM-2025-046,POL-CP-2025046,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,1181095.23,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0229,CLM-2025-134,POL-CP-2025134,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,135135.92,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0230,CLM-2025-070,POL-CP-2025070,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,403580.23,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0231,CLM-2025-138,POL-CP-2025138,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,186624.85,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0232,CLM-2025-124,POL-CP-2025124,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,159266.44,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0233,CLM-2025-120,POL-CP-2025120,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,231862.66,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0234,CLM-2025-112,POL-CP-2025112,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,109871.85,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0235,CLM-2025-069,POL-CP-2025069,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,893026.74,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0236,CLM-2025-083,POL-CP-2025083,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,325241.77,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0237,CLM-2025-063,POL-CP-2025063,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,635827.16,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0238,CLM-2025-023,POL-CP-2025023,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,2047164.3,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0239,CLM-2025-072,POL-CP-2025072,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,907218.69,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0240,CLM-2025-116,POL-CP-2025116,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,242444.52,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0241,CLM-2025-063,POL-CP-2025063,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,635827.16,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0242,CLM-2025-119,POL-CP-2025119,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,228971.38,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0243,CLM-2025-146,POL-CP-2025146,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,233795.7,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0244,CLM-2025-098,POL-CP-2025098,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,51063.71,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0245,CLM-2025-087,POL-CP-2025087,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,517741.93,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0246,CLM-2025-008,POL-CP-2025008,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,1562365.57,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0247,CLM-2025-127,POL-CP-2025127,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,170720.12,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0248,CLM-2025-084,POL-CP-2025084,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,257656.78,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0249,CLM-2025-047,POL-CP-2025047,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,1219914.83,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0250,CLM-2025-125,POL-CP-2025125,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,236946.62,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0251,CLM-2025-055,POL-CP-2025055,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,1923632.21,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0252,CLM-2025-091,POL-CP-2025091,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,52346.93,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0253,CLM-2025-067,POL-CP-2025067,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,810802.78,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0254,CLM-2025-088,POL-CP-2025088,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,861935.66,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0255,CLM-2025-072,POL-CP-2025072,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,907218.69,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0256,CLM-2025-071,POL-CP-2025071,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,835125.29,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0257,CLM-2025-143,POL-CP-2025143,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,189364.97,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0258,CLM-2025-003,POL-CP-2025003,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,700000.0,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0259,CLM-2025-133,POL-CP-2025133,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,203352.2,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0260,CLM-2025-049,POL-CP-2025049,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,2425588.15,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0261,CLM-2025-022,POL-CP-2025022,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,2252783.41,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0262,CLM-2025-062,POL-CP-2025062,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,358238.88,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0263,CLM-2025-105,POL-CP-2025105,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,156103.59,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0264,CLM-2025-126,POL-CP-2025126,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,202136.75,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0265,CLM-2025-143,POL-CP-2025143,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,189364.97,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0266,CLM-2025-062,POL-CP-2025062,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,358238.88,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0267,CLM-2025-122,POL-CP-2025122,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,262635.59,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0268,CLM-2025-126,POL-CP-2025126,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,202136.75,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0269,CLM-2025-115,POL-CP-2025115,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,133580.92,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0270,CLM-2025-005,POL-CP-2025005,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,2189860.6,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0271,CLM-2025-024,POL-CP-2025024,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,1707461.24,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0272,CLM-2025-076,POL-CP-2025076,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,99733.79,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0273,CLM-2025-057,POL-CP-2025057,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,1420518.5,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0274,CLM-2025-104,POL-CP-2025104,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,113022.96,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0275,CLM-2025-063,POL-CP-2025063,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,635827.16,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0276,CLM-2025-079,POL-CP-2025079,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,567680.54,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0277,CLM-2025-149,POL-CP-2025149,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,275533.04,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0278,CLM-2025-095,POL-CP-2025095,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,111079.19,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0279,CLM-2025-122,POL-CP-2025122,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,262635.59,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0280,CLM-2025-142,POL-CP-2025142,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,115652.34,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0281,CLM-2025-136,POL-CP-2025136,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,117392.2,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0282,CLM-2025-089,POL-CP-2025089,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,371488.57,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0283,CLM-2025-109,POL-CP-2025109,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,290670.54,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0284,CLM-2025-141,POL-CP-2025141,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,317797.95,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0285,CLM-2025-085,POL-CP-2025085,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,447785.38,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0286,CLM-2025-091,POL-CP-2025091,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,52346.93,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0287,CLM-2025-117,POL-CP-2025117,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,149344.96,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0288,CLM-2025-070,POL-CP-2025070,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,403580.23,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0289,CLM-2025-079,POL-CP-2025079,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,567680.54,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0290,CLM-2025-065,POL-CP-2025065,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,216683.36,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0291,CLM-2025-060,POL-CP-2025060,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,1761739.44,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0292,CLM-2025-031,POL-CP-2025031,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,2496256.09,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0293,CLM-2025-050,POL-CP-2025050,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,2321406.26,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0294,CLM-2025-081,POL-CP-2025081,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,553659.58,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0295,CLM-2025-031,POL-CP-2025031,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,2496256.09,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0296,CLM-2025-138,POL-CP-2025138,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,186624.85,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0297,CLM-2025-048,POL-CP-2025048,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,2172168.2,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0298,CLM-2025-050,POL-CP-2025050,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,2321406.26,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0299,CLM-2025-056,POL-CP-2025056,TR-2025-PROP-02,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,1110067.17,0.0,0.0,Quarterly Statement Certified,0
+BDX-2025-0300,CLM-2025-124,POL-CP-2025124,TR-2025-PROP-01,Aon Reinsurance Solutions,2025-06-30,Quarterly Statement Certified,159266.44,0.0,0.0,Quarterly Statement Certified,0

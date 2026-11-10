@@ -1,0 +1,20 @@
+=== [PAGE 1] ===
+REINSURANCE TREATY AGREEMENT: TR-2025-PROP-02
+Contract: Commercial Property Per Risk Excess of Loss Treaty
+Type: Per Risk Excess of Loss
+Reinsurer: Swiss Re Corporate Solutions | Intermediary Broker: Guy Carpenter
+Effective Period: 2025-01-01 00:01 Local Time to 2025-12-31 24:00 Local Time
+
+=== [PAGE 3] ===
+ARTICLE IV — RETENTION AND LIMIT
+The Company (Insurer) shall retain as its initial net loss retention the sum of USD $1,000,000.00 per event/risk.
+The Reinsurer shall be liable in respect of each loss occurrence for the excess of the Company's net retention up to a maximum limit of liability of USD $5,000,000.00.
+
+=== [PAGE 5] ===
+ARTICLE VIII — COVERED PERILS AND EXCLUSIONS
+Covered Perils: Fire, Lightning, Explosion
+Explicit Exclusions: Flood, Earthquake, Terrorism
+
+=== [PAGE 6] ===
+ARTICLE XI — LOSS OCCURRENCE DEFINITION (HOURS CLAUSE)
+All individual property claims arising out of one atmospheric or catastrophe event within a consecutive 24-hour period shall be deemed one single Loss Occurrence for retention and limit aggregation.

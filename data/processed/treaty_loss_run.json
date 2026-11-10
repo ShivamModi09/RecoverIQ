@@ -1,0 +1,41 @@
+[
+  {
+    "treaty_id": "TR-2025-PROP-01",
+    "treaty_name": "Commercial Property Catastrophe Excess of Loss Treaty",
+    "treaty_limit": 10000000.0,
+    "treaty_retention": 2000000.0,
+    "total_claims_count": 69,
+    "total_gross_incurred_usd": 28001003.01,
+    "total_paid_losses_usd": 26571051.14,
+    "total_case_reserves_usd": 1429951.87,
+    "total_reinsurance_billed_usd": 3701483.95,
+    "total_reinsurance_received_usd": 0.0,
+    "remaining_capacity_usd": 10000000.0
+  },
+  {
+    "treaty_id": "TR-2025-PROP-02",
+    "treaty_name": "Commercial Property Per Risk Excess of Loss Treaty",
+    "treaty_limit": 5000000.0,
+    "treaty_retention": 1000000.0,
+    "total_claims_count": 81,
+    "total_gross_incurred_usd": 114659337.17,
+    "total_paid_losses_usd": 90053228.19,
+    "total_case_reserves_usd": 24606108.99,
+    "total_reinsurance_billed_usd": 38298008.25,
+    "total_reinsurance_received_usd": 32102280.28,
+    "remaining_capacity_usd": -27102280.28
+  },
+  {
+    "treaty_id": "TR-2025-PROP-03",
+    "treaty_name": "Commercial Property Aggregate Stop Loss Treaty",
+    "treaty_limit": 20000000.0,
+    "treaty_retention": 15000000.0,
+    "total_claims_count": 0,
+    "total_gross_incurred_usd": 0,
+    "total_paid_losses_usd": 0,
+    "total_case_reserves_usd": 0,
+    "total_reinsurance_billed_usd": 0,
+    "total_reinsurance_received_usd": 0,
+    "remaining_capacity_usd": 20000000.0
+  }
+]

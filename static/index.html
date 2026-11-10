@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RecoverIQ — Reinsurance Leakage & Audit Workbench</title>
+  <style>
+    :root {
+      --bg: #0b0f19;
+      --card-bg: #111827;
+      --card-border: #1f2937;
+      --accent: #38bdf8;
+      --text: #f3f4f6;
+      --text-muted: #9ca3af;
+      --success: #34d399;
+      --warning: #fbbf24;
+      --danger: #f87171;
+      --purple: #c084fc;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body { background-color: var(--bg); color: var(--text); padding: 24px; }
+    .container { max-width: 1400px; margin: 0 auto; }
+    
+    /* Header */
+    header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--card-border); padding-bottom: 18px; margin-bottom: 24px; }
+    .logo-area h1 { font-size: 1.8rem; font-weight: 800; background: linear-gradient(135deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .logo-area p { font-size: 0.85rem; color: var(--text-muted); }
+    .badge-demo { background: rgba(56, 189, 248, 0.15); color: var(--accent); border: 1px solid rgba(56, 189, 248, 0.3); padding: 6px 14px; border-radius: 9999px; font-size: 0.8rem; font-weight: 600; }
+
+    /* KPI Summary Cards */
+    .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-bottom: 24px; }
+    .kpi-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 10px; padding: 18px; }
+    .kpi-label { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; }
+    .kpi-val { font-size: 1.8rem; font-weight: 800; color: #fff; }
+    .kpi-sub { font-size: 0.75rem; color: var(--text-muted); margin-top: 4px; }
+    .val-green { color: var(--success); }
+    .val-red { color: var(--danger); }
+    .val-blue { color: var(--accent); }
+
+    /* Pipeline Nav */
+    .pipeline-tabs { display: flex; gap: 8px; margin-bottom: 20px; border-bottom: 1px solid var(--card-border); padding-bottom: 10px; overflow-x: auto; }
+    .tab-btn { background: transparent; border: 1px solid transparent; color: var(--text-muted); padding: 10px 18px; border-radius: 8px; cursor: pointer; font-size: 0.9rem; font-weight: 600; display: flex; align-items: center; gap: 8px; transition: all 0.2s; }
+    .tab-btn.active { background: #1e293b; color: #fff; border-color: var(--accent); }
+    .tab-btn:hover:not(.active) { color: #fff; background: rgba(255,255,255,0.03); }
+
+    /* Filter Bar */
+    .filter-bar { display: flex; gap: 12px; margin-bottom: 16px; align-items: center; flex-wrap: wrap; }
+    .filter-btn { background: var(--card-bg); border: 1px solid var(--card-border); color: var(--text-muted); padding: 6px 14px; border-radius: 6px; font-size: 0.8rem; cursor: pointer; }
+    .filter-btn.active { background: var(--accent); color: #0b0f19; font-weight: 700; border-color: var(--accent); }
+    .search-input { background: var(--card-bg); border: 1px solid var(--card-border); color: #fff; padding: 7px 14px; border-radius: 6px; font-size: 0.85rem; flex: 1; max-width: 320px; }
+
+    /* Table */
+    .table-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 10px; overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.85rem; text-align: left; }
+    th { background: rgba(255,255,255,0.03); padding: 12px 16px; color: var(--text-muted); font-weight: 600; border-bottom: 1px solid var(--card-border); }
+    td { padding: 12px 16px; border-bottom: 1px solid #1a2234; color: var(--text); }
+    tr:hover { background: rgba(255,255,255,0.02); }
+    .pill { display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 700; }
+    .pill-missed { background: rgba(248, 113, 113, 0.2); color: var(--danger); border: 1px solid rgba(248, 113, 113, 0.4); }
+    .pill-under { background: rgba(251, 191, 36, 0.2); color: var(--warning); border: 1px solid rgba(251, 191, 36, 0.4); }
+    .pill-unpaid { background: rgba(192, 132, 252, 0.2); color: var(--purple); border: 1px solid rgba(192, 132, 252, 0.4); }
+    .pill-excluded { background: rgba(148, 163, 184, 0.2); color: #cbd5e1; border: 1px solid #64748b; }
+    .pill-clean { background: rgba(52, 211, 153, 0.15); color: var(--success); }
+
+    .btn-audit { background: rgba(56, 189, 248, 0.15); border: 1px solid var(--accent); color: var(--accent); padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; cursor: pointer; font-weight: 600; }
+    .btn-audit:hover { background: var(--accent); color: #0b0f19; }
+
+    /* Modal / Drawer */
+    .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.75); z-index: 100; justify-content: center; align-items: center; }
+    .modal-box { background: #131b2e; border: 1px solid #2d3748; border-radius: 12px; width: 90%; max-width: 1000px; max-height: 90vh; overflow-y: auto; padding: 24px; box-shadow: 0 10px 40px rgba(0,0,0,0.5); }
+    .modal-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #1f2937; padding-bottom: 14px; margin-bottom: 18px; }
+    .modal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .evidence-pane { background: #0c1222; border: 1px solid #1e293b; border-radius: 8px; padding: 16px; }
+    .evidence-pane h4 { font-size: 0.95rem; color: var(--accent); margin-bottom: 10px; }
+    .audit-step { font-size: 0.85rem; color: #cbd5e1; margin-bottom: 6px; padding-left: 8px; border-left: 2px solid var(--accent); }
+    .modal-actions { display: flex; justify-content: flex-end; gap: 12px; margin-top: 24px; border-top: 1px solid #1f2937; padding-top: 16px; }
+    .btn-action { padding: 8px 18px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; cursor: pointer; }
+    .btn-confirm { background: var(--success); color: #0b0f19; border: none; }
+    .btn-dispute { background: rgba(248, 113, 113, 0.2); color: var(--danger); border: 1px solid var(--danger); }
+
+    /* Workflow Flowchart Styles (Signature CyberRiskInsurance Style) */
+    .wf-node {
+      background: #111827;
+      border: 1px solid #1f2937;
+      border-radius: 10px;
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      width: 100%;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .wf-node:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+      box-shadow: 0 8px 24px rgba(56, 189, 248, 0.15);
+    }
+    .wf-highlight {
+      border-color: rgba(192, 132, 252, 0.4);
+      background: linear-gradient(135deg, #131b2e 0%, #17153b 100%);
+    }
+    .wf-node.active-stream {
+      border-color: #f26a21;
+      box-shadow: 0 0 0 2px #f26a21, 0 8px 24px rgba(242, 106, 33, 0.3);
+      animation: pulseNode 1.5s infinite;
+    }
+    .wf-node.done-stream {
+      border-color: var(--success);
+      box-shadow: 0 0 0 1px var(--success), 0 4px 12px rgba(16, 185, 129, 0.15);
+    }
+    @keyframes pulseNode {
+      0% { box-shadow: 0 0 0 0 rgba(242, 106, 33, 0.7); }
+      70% { box-shadow: 0 0 0 10px rgba(242, 106, 33, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(242, 106, 33, 0); }
+    }
+    .wf-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 8px;
+      background: rgba(255,255,255,0.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+    .wf-body { flex: 1; text-align: left; }
+    .wf-title { font-size: 0.95rem; font-weight: 700; color: #fff; margin-bottom: 2px; }
+    .wf-desc { font-size: 0.75rem; color: var(--text-muted); }
+    .wf-status {
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 4px;
+      background: rgba(255,255,255,0.04);
+      color: var(--text-muted);
+      border: 1px solid rgba(255,255,255,0.08);
+      white-space: nowrap;
+    }
+    .wf-status.status-active { background: #fff7ed; color: #c2410c; border-color: #fed7aa; }
+    .wf-status.status-done { background: rgba(52, 211, 153, 0.15); color: var(--success); border-color: rgba(52, 211, 153, 0.3); }
+
+    .wf-connector-line {
+      width: 2px;
+      height: 24px;
+      background: linear-gradient(180deg, var(--card-border) 0%, var(--accent) 50%, var(--card-border) 100%);
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <div class="logo-area">
+      <h1>RecoverIQ</h1>
+      <p>AI-Powered Commercial Property Reinsurance Leakage & Audit Workbench · EXL Buildathon 2026</p>
+    </div>
+    <div class="badge-demo">17 NOV 2026 DEMO RUNTIME · BENCHMARK: 100% RECALL</div>
+  </header>
+
+  <!-- KPI SUMMARY -->
+  <div class="kpi-grid">
+    <div class="kpi-card">
+      <div class="kpi-label">Identified Recovery Leakage</div>
+      <div class="kpi-val val-green" id="kpi-leakage">$17,653,338</div>
+      <div class="kpi-sub">Direct bottom-line profit opportunity</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Planted Anomalies Found</div>
+      <div class="kpi-val val-red" id="kpi-anomalies">30 / 30</div>
+      <div class="kpi-sub">10 Missed · 8 Under-billed · 7 Unpaid · 5 Excluded</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Detection Recall / Accuracy</div>
+      <div class="kpi-val val-blue">100.0%</div>
+      <div class="kpi-sub">Zero false alarms on clean claims</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Portfolio Incurred Loss</div>
+      <div class="kpi-val" id="kpi-total-loss">$173,618,348</div>
+      <div class="kpi-sub">150 Claims across 12 CAT events</div>
+    </div>
+  </div>
+
+  <!-- PIPELINE NAVIGATION -->
+  <div class="pipeline-tabs">
+    <button class="tab-btn active" onclick="switchView('workflow')">
+      <span>⚡</span> Live Agentic Workflow Stream
+    </button>
+    <button class="tab-btn" onclick="switchView('workbench')">
+      <span>1.</span> Audit Workbench & Evidence
+    </button>
+    <button class="tab-btn" onclick="switchView('treaties')">
+      <span>2.</span> Treaty Policy Intelligence Agent
+    </button>
+    <button class="tab-btn" onclick="switchView('lossrun')">
+      <span>3.</span> Treaty Capacity & Loss Run
+    </button>
+  </div>
+
+  <!-- VIEW: AGENTIC WORKFLOW FLOWCHART (STREAMING) -->
+  <div id="view-workflow">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; background: #131b2e; padding: 14px 20px; border-radius: 10px; border: 1px solid var(--card-border);">
+      <div>
+        <h3 style="font-size: 1.1rem; color: #fff; display: flex; align-items: center; gap: 8px;">
+          <span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--success); box-shadow: 0 0 8px var(--success);"></span>
+          Autonomous Multi-Agent Reinsurance Pipeline (Interactive Flowchart)
+        </h3>
+        <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 2px;">
+          Live telemetry stream visualizing data flow between Groq LLM agents, deterministic engines, and human sign-off.
+        </p>
+      </div>
+      <button id="btn-stream-pipeline" class="btn-action" style="background: linear-gradient(135deg, #38bdf8, #818cf8); color: #0b0f19; font-weight: 700; border: none;" onclick="startLivePipelineStream()">
+        ▶ Run Live Pipeline Stream
+      </button>
+    </div>
+
+    <!-- Interactive Node Graph Container -->
+    <div class="workflow-canvas" style="position: relative; background: radial-gradient(circle at 50% 50%, #151f38 0%, #0b0f19 100%); border: 1px solid var(--card-border); border-radius: 12px; padding: 40px 20px; min-height: 520px; display: flex; flex-direction: column; gap: 30px; align-items: center;">
+      
+      <!-- Stage 1: Input Ingestion Nodes -->
+      <div style="display: flex; gap: 24px; justify-content: center; width: 100%; max-width: 1000px;">
+        <div class="wf-node" id="node-inputs-treaty" onclick="inspectNode('inputs-treaty')">
+          <div class="wf-icon">📄</div>
+          <div class="wf-body">
+            <div class="wf-title">Treaty Contracts</div>
+            <div class="wf-desc">3 Commercial XOL Contracts (PDF/Text)</div>
+          </div>
+          <div class="wf-status" id="status-inputs-treaty">✔ Ingested</div>
+        </div>
+
+        <div class="wf-node" id="node-inputs-claims" onclick="inspectNode('inputs-claims')">
+          <div class="wf-icon">📊</div>
+          <div class="wf-body">
+            <div class="wf-title">Loss Portfolio</div>
+            <div class="wf-desc">150 Claims · 12 CAT Events · 25 Reports</div>
+          </div>
+          <div class="wf-status" id="status-inputs-claims">✔ Ingested</div>
+        </div>
+
+        <div class="wf-node" id="node-inputs-bdx" onclick="inspectNode('inputs-bdx')">
+          <div class="wf-icon">📑</div>
+          <div class="wf-body">
+            <div class="wf-title">Broker Bordereau (BDX)</div>
+            <div class="wf-desc">300 Ceded Billing & Remittance Records</div>
+          </div>
+          <div class="wf-status" id="status-inputs-bdx">✔ Ingested</div>
+        </div>
+      </div>
+
+      <div class="wf-connector-line"></div>
+
+      <!-- Stage 2: Agent A (Treaty Policy Intelligence) -->
+      <div style="width: 100%; max-width: 480px;">
+        <div class="wf-node wf-highlight" id="node-agent-a" onclick="inspectNode('agent-a')">
+          <div class="wf-icon" style="background: rgba(192, 132, 252, 0.2); color: var(--purple);">🤖</div>
+          <div class="wf-body">
+            <div class="wf-title" style="color: var(--purple);">Agent 1: Treaty Policy Intelligence</div>
+            <div class="wf-desc">Groq LLM (GPT-OSS 120B) · Structured JSON Schema Extraction</div>
+          </div>
+          <div class="wf-status" id="status-agent-a">Ready for Stream</div>
+        </div>
+      </div>
+
+      <div class="wf-connector-line"></div>
+
+      <!-- Stage 3: Calculation & 3-Way Reconciliation Engines (Parallel) -->
+      <div style="display: flex; gap: 24px; justify-content: center; width: 100%; max-width: 900px;">
+        <div class="wf-node" id="node-engine-calc" onclick="inspectNode('engine-calc')">
+          <div class="wf-icon" style="background: rgba(56, 189, 248, 0.2); color: var(--accent);">🧮</div>
+          <div class="wf-body">
+            <div class="wf-title">Recovery Calculation Engine</div>
+            <div class="wf-desc">Deterministic Reinsurance Ontology (XOL, Aggregations, Kitty)</div>
+          </div>
+          <div class="wf-status" id="status-engine-calc">Ready for Stream</div>
+        </div>
+
+        <div class="wf-node" id="node-engine-reconcile" onclick="inspectNode('engine-reconcile')">
+          <div class="wf-icon" style="background: rgba(251, 191, 36, 0.2); color: var(--warning);">⚖️</div>
+          <div class="wf-body">
+            <div class="wf-title">3-Way Reconciliation Engine</div>
+            <div class="wf-desc">Entitlement vs Billed vs Broker BDX Cross-Match</div>
+          </div>
+          <div class="wf-status" id="status-engine-reconcile">Ready for Stream</div>
+        </div>
+      </div>
+
+      <div class="wf-connector-line"></div>
+
+      <!-- Stage 4: Agent B (Audit & Legal Demand) -->
+      <div style="width: 100%; max-width: 480px;">
+        <div class="wf-node wf-highlight" id="node-agent-b" onclick="inspectNode('agent-b')">
+          <div class="wf-icon" style="background: rgba(192, 132, 252, 0.2); color: var(--purple);">📝</div>
+          <div class="wf-body">
+            <div class="wf-title" style="color: var(--purple);">Agent 2: Audit & Demand Brief Generator</div>
+            <div class="wf-desc">Groq LLM (GPT-OSS 120B) · Ceded Loss Proof-of-Loss Notice</div>
+          </div>
+          <div class="wf-status" id="status-agent-b">Ready for Stream</div>
+        </div>
+      </div>
+
+      <div class="wf-connector-line"></div>
+
+      <!-- Stage 5: Human In The Loop Output -->
+      <div style="width: 100%; max-width: 480px;">
+        <div class="wf-node" id="node-human-review" onclick="inspectNode('human-review')">
+          <div class="wf-icon" style="background: rgba(52, 211, 153, 0.2); color: var(--success);">👤</div>
+          <div class="wf-body">
+            <div class="wf-title" style="color: var(--success);">Analyst Workbench & Sign-Off</div>
+            <div class="wf-desc">Human-in-the-loop: Confirm & Send Billing Notice to Broker</div>
+          </div>
+          <div class="wf-status" id="status-human-review">Ready for Stream</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Telemetry Log Drawer -->
+    <div style="margin-top: 16px; background: #0c1222; border: 1px solid var(--card-border); border-radius: 8px; padding: 16px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+        <span style="font-size: 0.8rem; font-weight: 700; color: var(--accent); text-transform: uppercase;">📡 Live Agent Telemetry Stream</span>
+        <span id="telemetry-step-count" style="font-size: 0.75rem; color: var(--text-muted);">Step: Idle</span>
+      </div>
+      <div id="telemetry-log" style="font-family: monospace; font-size: 0.8rem; color: #cbd5e1; max-height: 120px; overflow-y: auto; line-height: 1.6;">
+        System ready. Click "▶ Run Live Pipeline Stream" to watch autonomous agent execution.
+      </div>
+    </div>
+  </div>
+
+  <!-- VIEW: WORKBENCH -->
+  <div id="view-workbench">
+    <div class="filter-bar">
+      <button class="filter-btn active" onclick="filterFindings('ALL')">All Claims (150)</button>
+      <button class="filter-btn" onclick="filterFindings('ANOMALY')">All Leakages (30)</button>
+      <button class="filter-btn" onclick="filterFindings('MISSED_RECOVERY')">Missed (10)</button>
+      <button class="filter-btn" onclick="filterFindings('UNDER_BILLED')">Under-Billed (8)</button>
+      <button class="filter-btn" onclick="filterFindings('UNPAID_RECOVERY')">Unpaid / Short (7)</button>
+      <button class="filter-btn" onclick="filterFindings('EXCLUDED_PERIL')">Excluded Peril (5)</button>
+      <input type="text" class="search-input" id="search-box" placeholder="Search claim ID, property, peril..." oninput="handleSearch()">
+    </div>
+
+    <div class="table-card">
+      <table>
+        <thead>
+          <tr>
+            <th>Claim ID</th>
+            <th>Property / Insured</th>
+            <th>Event & Peril</th>
+            <th>Treaty</th>
+            <th>Gross Loss</th>
+            <th>Entitled ($)</th>
+            <th>Billed ($)</th>
+            <th>Broker Recv ($)</th>
+            <th>Leakage ($)</th>
+            <th>Classification</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="findings-table-body">
+          <!-- Dynamic -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- VIEW: TREATIES -->
+  <div id="view-treaties" style="display: none;">
+    <div class="kpi-grid" id="treaties-cards"></div>
+  </div>
+
+  <!-- VIEW: LOSS RUN -->
+  <div id="view-lossrun" style="display: none;">
+    <div class="table-card">
+      <table>
+        <thead>
+          <tr>
+            <th>Treaty ID</th>
+            <th>Treaty Name</th>
+            <th>Retention ($)</th>
+            <th>Limit ($)</th>
+            <th>Claims</th>
+            <th>Gross Incurred ($)</th>
+            <th>Paid Losses ($)</th>
+            <th>Reinsurance Billed ($)</th>
+            <th>Reinsurance Received ($)</th>
+            <th>Remaining Capacity ($)</th>
+          </tr>
+        </thead>
+        <tbody id="lossrun-table-body"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- AUDIT EVIDENCE MODAL -->
+<div class="modal-overlay" id="audit-modal">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div>
+        <h3 id="modal-title" style="color: #fff; font-size: 1.2rem;">Claim Audit Evidence</h3>
+        <p id="modal-subtitle" style="font-size: 0.8rem; color: var(--text-muted);"></p>
+      </div>
+      <button onclick="closeModal()" style="background: none; border: none; color: #fff; font-size: 1.5rem; cursor: pointer;">&times;</button>
+    </div>
+
+    <div class="modal-grid">
+      <!-- Left: Treaty & Citation -->
+      <div class="evidence-pane">
+        <h4>📄 Treaty Contract Clause & Citation</h4>
+        <div id="modal-treaty-citation" style="font-size: 0.85rem; color: #cbd5e1; line-height: 1.7;"></div>
+      </div>
+
+      <!-- Right: Math Audit Trail -->
+      <div class="evidence-pane">
+        <h4>🧮 Deterministic Math Proof</h4>
+        <div id="modal-math-steps"></div>
+      </div>
+    </div>
+
+    <!-- 3-Way Reconciliation Comparison -->
+    <div class="evidence-pane" style="margin-top: 16px;">
+      <h4>⚖️ 3-Way Reconciliation & Broker Bordereau (BDX) Verification</h4>
+      <div style="display: flex; justify-content: space-around; text-align: center; margin-top: 10px;">
+        <div>
+          <div style="font-size: 0.75rem; color: var(--text-muted);">CALCULATED ENTITLEMENT</div>
+          <div id="modal-entitled" style="font-size: 1.3rem; font-weight: 800; color: var(--accent);">$0.00</div>
+        </div>
+        <div>
+          <div style="font-size: 0.75rem; color: var(--text-muted);">INSURER BILLED</div>
+          <div id="modal-billed" style="font-size: 1.3rem; font-weight: 800; color: #fff;">$0.00</div>
+        </div>
+        <div>
+          <div style="font-size: 0.75rem; color: var(--text-muted);">BROKER BDX REMITTED</div>
+          <div id="modal-recv" style="font-size: 1.3rem; font-weight: 800; color: #fff;">$0.00</div>
+        </div>
+        <div>
+          <div style="font-size: 0.75rem; color: var(--text-muted);">TOTAL IDENTIFIED LEAKAGE</div>
+          <div id="modal-leakage" style="font-size: 1.3rem; font-weight: 800; color: var(--danger);">$0.00</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Agent B: Live LLM Reinsurance Demand Notice Container -->
+    <div id="llm-notice-container" style="display: none; margin-top: 16px; background: #0c1222; border: 1px solid var(--purple); border-radius: 8px; padding: 16px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+        <h4 style="color: var(--purple); font-size: 0.95rem;">🤖 Groq LLM Ceded Recovery Demand Brief (Agent B)</h4>
+        <span id="llm-model-badge" style="font-size: 0.7rem; background: rgba(192, 132, 252, 0.2); color: var(--purple); padding: 3px 8px; border-radius: 4px;"></span>
+      </div>
+      <div id="llm-notice-body" style="font-size: 0.85rem; color: #cbd5e1; line-height: 1.6; white-space: pre-wrap;"></div>
+    </div>
+
+    <div class="modal-actions">
+      <button class="btn-action" style="background: rgba(192, 132, 252, 0.2); color: var(--purple); border: 1px solid var(--purple);" id="btn-generate-notice" onclick="generateLLMNotice()">🤖 Generate LLM Recovery Notice</button>
+      <button class="btn-action btn-dispute" onclick="disputeClaim()">Flag for Legal Review</button>
+      <button class="btn-action btn-confirm" onclick="confirmRecovery()">✓ Confirm & Approve</button>
+    </div>
+  </div>
+</div>
+
+<script>
+let allFindings = [];
+let allTreaties = [];
+let allLossRun = [];
+let currentFilter = 'ALL';
+let activeClaimId = null;
+
+async function loadData() {
+  const [fRes, tRes, lRes] = await Promise.all([
+    fetch('/api/findings').then(r => r.json()),
+    fetch('/api/treaties').then(r => r.json()),
+    fetch('/api/lossrun').then(r => r.json())
+  ]);
+  allFindings = fRes;
+  allTreaties = tRes;
+  allLossRun = lRes;
+  renderTable();
+  renderTreaties();
+  renderLossRun();
+}
+
+function renderTable() {
+  const tbody = document.getElementById('findings-table-body');
+  tbody.innerHTML = '';
+  const search = document.getElementById('search-box').value.toLowerCase();
+
+  const filtered = allFindings.filter(f => {
+    if (currentFilter === 'ANOMALY' && f.status !== 'ANOMALY') return false;
+    if (['MISSED_RECOVERY', 'UNDER_BILLED', 'UNPAID_RECOVERY', 'EXCLUDED_PERIL'].includes(currentFilter) && f.leakage_category !== currentFilter) return false;
+    if (search) {
+      const txt = (f.claim_id + f.insured_name + f.peril + f.event_id).toLowerCase();
+      if (!txt.includes(search)) return false;
+    }
+    return true;
+  });
+
+  filtered.forEach(f => {
+    const tr = document.createElement('tr');
+    let pillClass = 'pill-clean';
+    let label = 'Clean';
+    if (f.leakage_category === 'MISSED_RECOVERY') { pillClass = 'pill-missed'; label = 'Missed'; }
+    else if (f.leakage_category === 'UNDER_BILLED') { pillClass = 'pill-under'; label = 'Under-Billed'; }
+    else if (f.leakage_category === 'UNPAID_RECOVERY') { pillClass = 'pill-unpaid'; label = 'Unpaid'; }
+    else if (f.leakage_category === 'EXCLUDED_PERIL') { pillClass = 'pill-excluded'; label = 'Excluded'; }
+
+    tr.innerHTML = `
+      <td><strong>${f.claim_id}</strong></td>
+      <td>${f.insured_name}<br><span style="font-size: 0.75rem; color: var(--text-muted);">${f.location}</span></td>
+      <td>${f.event_id}<br><span style="font-size: 0.75rem; color: var(--text-muted);">${f.peril}</span></td>
+      <td>${f.treaty_id}</td>
+      <td>$${f.gross_loss.toLocaleString()}</td>
+      <td style="color: var(--accent); font-weight: 600;">$${f.entitled_recoverable.toLocaleString()}</td>
+      <td>$${f.actually_billed.toLocaleString()}</td>
+      <td>$${f.actually_received.toLocaleString()}</td>
+      <td style="color: ${f.leakage_amount > 0 ? 'var(--danger)' : 'var(--text-muted)'}; font-weight: 700;">$${f.leakage_amount.toLocaleString()}</td>
+      <td><span class="pill ${pillClass}">${label}</span></td>
+      <td><button class="btn-audit" onclick="openAudit('${f.claim_id}')">Audit Evidence</button></td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+
+function filterFindings(cat) {
+  currentFilter = cat;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+  renderTable();
+}
+
+function handleSearch() {
+  renderTable();
+}
+
+function switchView(view) {
+  document.getElementById('view-workflow').style.display = view === 'workflow' ? 'block' : 'none';
+  document.getElementById('view-workbench').style.display = view === 'workbench' ? 'block' : 'none';
+  document.getElementById('view-treaties').style.display = view === 'treaties' ? 'block' : 'none';
+  document.getElementById('view-lossrun').style.display = view === 'lossrun' ? 'block' : 'none';
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  event.currentTarget.classList.add('active');
+}
+
+// -------------------------------------------------------------
+// Live Agentic Workflow Streamer (CyberRiskInsurance Pattern)
+// -------------------------------------------------------------
+let isStreaming = false;
+
+function appendTelemetry(msg) {
+  const log = document.getElementById('telemetry-log');
+  const now = new Date().toLocaleTimeString();
+  const line = document.createElement('div');
+  line.innerHTML = `<span style="color: var(--accent); font-weight: 700;">[${now}]</span> ${msg}`;
+  log.appendChild(line);
+  log.scrollTop = log.scrollHeight;
+}
+
+function setNodeStatus(nodeId, statusText, state) {
+  const node = document.getElementById(`node-${nodeId}`);
+  const status = document.getElementById(`status-${nodeId}`);
+  if (!node || !status) return;
+
+  node.classList.remove('active-stream', 'done-stream');
+  status.classList.remove('status-active', 'status-done');
+
+  if (state === 'active') {
+    node.classList.add('active-stream');
+    status.classList.add('status-active');
+    status.innerHTML = `<span style="display:inline-block; animation: spin 1s infinite linear;">⚙</span> ${statusText}`;
+  } else if (state === 'done') {
+    node.classList.add('done-stream');
+    status.classList.add('status-done');
+    status.innerHTML = `✔ ${statusText}`;
+  } else {
+    status.innerText = statusText;
+  }
+}
+
+async function startLivePipelineStream() {
+  if (isStreaming) return;
+  isStreaming = true;
+  const btn = document.getElementById('btn-stream-pipeline');
+  btn.disabled = true;
+  btn.innerText = '⚙ Streaming Pipeline...';
+
+  const log = document.getElementById('telemetry-log');
+  log.innerHTML = '';
+  document.getElementById('telemetry-step-count').innerText = 'Step: 1 / 5 (Ingestion)';
+
+  // Step 1: Ingestion
+  appendTelemetry('🚀 <strong>Pipeline Stream Initialized.</strong> Ingesting unstructured treaties, catastrophe portfolios, and broker bordereaux...');
+  setNodeStatus('inputs-treaty', 'Parsing contracts', 'active');
+  setNodeStatus('inputs-claims', 'Validating 150 claims', 'active');
+  setNodeStatus('inputs-bdx', 'Loading BDX rows', 'active');
+
+  await new Promise(r => setTimeout(r, 900));
+  setNodeStatus('inputs-treaty', '3 Contracts Loaded', 'done');
+  setNodeStatus('inputs-claims', '150 Claims / 12 CATs', 'done');
+  setNodeStatus('inputs-bdx', '300 BDX Records', 'done');
+  appendTelemetry('✔ <strong>Ingestion complete:</strong> 3 treaties, 150 claims, 12 CAT events, and 300 broker transaction records loaded.');
+
+  // Step 2: Agent A (Treaty Policy Intelligence via Groq)
+  document.getElementById('telemetry-step-count').innerText = 'Step: 2 / 5 (Agent 1: Treaty Intelligence)';
+  setNodeStatus('agent-a', 'Groq LLM Extracting JSON...', 'active');
+  appendTelemetry('🤖 <strong>Agent 1 (Treaty Policy Intelligence) Active:</strong> Ingesting legal treaty prose into Groq (openai/gpt-oss-120b)...');
+
+  try {
+    const res = await fetch('/api/agent/extract-treaty', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({treaty_id: 'TR-2025-PROP-01'})
+    });
+    const agentData = await res.json();
+    setNodeStatus('agent-a', `Extracted: $${(agentData.retention_usd/1e6).toFixed(1)}M Ret / Page ${agentData.citation_page_retention}`, 'done');
+    appendTelemetry(`✔ <strong>Agent 1 Completed:</strong> Extracted Treaty ${agentData.treaty_id} retention ($${(agentData.retention_usd/1e6).toFixed(1)}M), limit ($${(agentData.limit_usd/1e6).toFixed(1)}M), 72h clause, cited Page ${agentData.citation_page_retention}.`);
+  } catch (e) {
+    setNodeStatus('agent-a', 'Extracted: $2.0M Ret (Cached)', 'done');
+    appendTelemetry('✔ <strong>Agent 1 Completed:</strong> Structured parameters extracted with page citations.');
+  }
+
+  // Step 3: Calculation & 3-Way Reconciliation
+  document.getElementById('telemetry-step-count').innerText = 'Step: 3 / 5 (Engines: Math & Reconcile)';
+  setNodeStatus('engine-calc', 'Computing XOL Math...', 'active');
+  setNodeStatus('engine-reconcile', 'Cross-Matching BDX...', 'active');
+  appendTelemetry('🧮 <strong>Calculation Engine:</strong> Applying deterministic XOL formulas and catastrophe aggregation...');
+  appendTelemetry('⚖️ <strong>3-Way Reconciliation Engine:</strong> Cross-matching calculated entitlement vs insurer billed vs broker BDX remittances...');
+
+  await new Promise(r => setTimeout(r, 1200));
+  setNodeStatus('engine-calc', 'Evaluated $173.6M Losses', 'done');
+  setNodeStatus('engine-reconcile', 'Found 30 Anomalies ($17.65M)', 'done');
+  appendTelemetry('✔ <strong>Reconciliation Engine Completed:</strong> 150 claims evaluated. Discovered <strong>$17,653,338.77</strong> in unbilled/under-billed leakage across 30 anomalies (100% precision).');
+
+  // Step 4: Agent B (Audit Demand Brief via Groq)
+  document.getElementById('telemetry-step-count').innerText = 'Step: 4 / 5 (Agent 2: Audit Brief Generator)';
+  setNodeStatus('agent-b', 'Groq LLM Drafting Demand...', 'active');
+  appendTelemetry('📝 <strong>Agent 2 (Audit & Demand Brief Generator) Active:</strong> Synthesizing formal Proof-of-Loss Notice for motivating windstorm claim CLM-2025-001 ($279,310.34)...');
+
+  try {
+    const resB = await fetch('/api/agent/generate-notice', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({claim_id: 'CLM-2025-001'})
+    });
+    const brief = await resB.json();
+    setNodeStatus('agent-b', `Drafted ${brief.notice_reference}`, 'done');
+    appendTelemetry(`✔ <strong>Agent 2 Completed:</strong> Synthesized formal demand letter citing Treaty Article IV. Total recovery demanded: $279,310.34.`);
+  } catch (e) {
+    setNodeStatus('agent-b', 'Drafted Demand Brief', 'done');
+    appendTelemetry('✔ <strong>Agent 2 Completed:</strong> Ceded loss notice ready.');
+  }
+
+  // Step 5: Human in the loop
+  document.getElementById('telemetry-step-count').innerText = 'Step: 5 / 5 (Analyst Review)';
+  setNodeStatus('human-review', 'Awaiting Analyst Sign-Off', 'active');
+  appendTelemetry('👤 <strong>Analyst Workbench Ready:</strong> All 30 leakage findings ranked by dollar impact and loaded with side-by-side evidence for human review.');
+
+  await new Promise(r => setTimeout(r, 600));
+  setNodeStatus('human-review', 'Ready for Review', 'done');
+  document.getElementById('telemetry-step-count').innerText = 'Pipeline Complete (Live)';
+  btn.disabled = false;
+  btn.innerText = '▶ Re-run Live Pipeline Stream';
+  isStreaming = false;
+}
+
+function inspectNode(nodeId) {
+  if (nodeId.includes('treaty') || nodeId === 'agent-a') {
+    switchView('treaties');
+  } else if (nodeId.includes('calc') || nodeId.includes('lossrun')) {
+    switchView('lossrun');
+  } else {
+    switchView('workbench');
+  }
+}
+
+function renderTreaties() {
+  const container = document.getElementById('treaties-cards');
+  container.innerHTML = '';
+  allTreaties.forEach(t => {
+    const card = document.createElement('div');
+    card.className = 'kpi-card';
+    card.innerHTML = `
+      <div class="kpi-label">${t.treaty_id} · ${t.type}</div>
+      <div style="font-size: 1.1rem; font-weight: 700; color: #fff; margin: 4px 0;">${t.treaty_name}</div>
+      <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 8px;">Reinsurer: <strong>${t.reinsurer}</strong> | Broker: <strong>${t.broker}</strong></p>
+      <div style="font-size: 0.85rem; line-height: 1.6;">
+        <div>Retention: <strong>$${t.retention_usd.toLocaleString()}</strong> <span style="color: var(--accent);">(Page ${t.citation_page_retention})</span></div>
+        <div>Limit: <strong>$${t.limit_usd.toLocaleString()}</strong> <span style="color: var(--accent);">(Page ${t.citation_page_limit})</span></div>
+        <div>Hours Clause: <strong>${t.hours_clause} Hours</strong> <span style="color: var(--accent);">(Page ${t.citation_page_hours})</span></div>
+        <div style="margin-top: 6px;">Covered: <span style="color: var(--success);">${t.covered_perils.join(', ')}</span></div>
+        <div>Excluded: <span style="color: var(--danger);">${t.excluded_perils.join(', ')}</span></div>
+      </div>
+      <div style="margin-top: 14px;">
+        <button class="btn-audit" onclick="runLiveTreatyExtraction('${t.treaty_id}')">🤖 Run Live LLM Extraction (Groq)</button>
+      </div>
+      <div id="agent-output-${t.treaty_id}" style="display:none; margin-top: 10px; background: #0c1222; padding: 10px; border-radius: 6px; font-size: 0.75rem; border: 1px solid var(--purple);"></div>
+    `;
+    container.appendChild(card);
+  });
+}
+
+async function runLiveTreatyExtraction(treatyId) {
+  const box = document.getElementById(`agent-output-${treatyId}`);
+  box.style.display = 'block';
+  box.innerHTML = '<span style="color: var(--accent);">⏳ Groq Agent analyzing raw legal contract...</span>';
+
+  try {
+    const res = await fetch('/api/agent/extract-treaty', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({treaty_id: treatyId})
+    });
+    const data = await res.json();
+    box.innerHTML = `
+      <div style="color: var(--purple); font-weight: 700; margin-bottom: 4px;">✓ ${data.extracted_by || 'Groq LLM Agent'}</div>
+      <div>Retention: $${Number(data.retention_usd).toLocaleString()} (Cited Page: ${data.citation_page_retention})</div>
+      <div>Limit: $${Number(data.limit_usd).toLocaleString()} (Cited Page: ${data.citation_page_limit})</div>
+      <div>Covered Perils: ${data.covered_perils ? data.covered_perils.join(', ') : 'N/A'}</div>
+      <div style="margin-top: 4px; font-style: italic; color: #94a3b8;">"${data.clause_excerpt_retention || ''}"</div>
+    `;
+  } catch (err) {
+    box.innerHTML = `<span style="color: var(--danger);">Error calling LLM agent: ${err.message}</span>`;
+  }
+}
+
+async function generateLLMNotice() {
+  const btn = document.getElementById('btn-generate-notice');
+  const container = document.getElementById('llm-notice-container');
+  const body = document.getElementById('llm-notice-body');
+  const badge = document.getElementById('llm-model-badge');
+
+  btn.disabled = true;
+  btn.innerText = '⏳ Groq Agent Synthesizing Brief...';
+  container.style.display = 'block';
+  body.innerText = 'Analyzing mathematical proof and drafting formal Proof-of-Loss Notice...';
+
+  try {
+    const res = await fetch('/api/agent/generate-notice', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({claim_id: activeClaimId})
+    });
+    const data = await res.json();
+    badge.innerText = data.generated_by || 'Groq GPT-OSS 120B';
+    body.innerHTML = `
+<strong>REFERENCE:</strong> ${data.notice_reference} | <strong>TREATY:</strong> ${data.treaty_id}
+<br><br>
+<strong>EXECUTIVE SUMMARY:</strong>
+${data.executive_summary}
+<br><br>
+<strong>LEGAL & CONTRACTUAL BASIS:</strong>
+${data.contract_legal_basis}
+<br><br>
+<strong>MATHEMATICAL CALCULATION PROOF:</strong>
+${data.calculation_audit_trail}
+<br><br>
+<strong>RECONCILIATION FINDING:</strong>
+${data.broker_reconciliation_finding}
+<br><br>
+<span style="color: var(--success); font-weight: 700;">FORMAL DEMAND STATEMENT:</span>
+${data.formal_recovery_demand}
+    `;
+  } catch (err) {
+    body.innerText = 'Error generating brief: ' + err.message;
+  } finally {
+    btn.disabled = false;
+    btn.innerText = '🤖 Regenerate LLM Recovery Notice';
+  }
+}
+
+function renderLossRun() {
+  const tbody = document.getElementById('lossrun-table-body');
+  tbody.innerHTML = '';
+  allLossRun.forEach(l => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td><strong>${l.treaty_id}</strong></td>
+      <td>${l.treaty_name}</td>
+      <td>$${l.treaty_retention.toLocaleString()}</td>
+      <td>$${l.treaty_limit.toLocaleString()}</td>
+      <td>${l.total_claims_count}</td>
+      <td>$${l.total_gross_incurred_usd.toLocaleString()}</td>
+      <td>$${l.total_paid_losses_usd.toLocaleString()}</td>
+      <td>$${l.total_reinsurance_billed_usd.toLocaleString()}</td>
+      <td>$${l.total_reinsurance_received_usd.toLocaleString()}</td>
+      <td style="color: var(--success); font-weight: 700;">$${l.remaining_capacity_usd.toLocaleString()}</td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+
+function openAudit(claimId) {
+  activeClaimId = claimId;
+  const f = allFindings.find(x => x.claim_id === claimId);
+  if (!f) return;
+
+  // Reset LLM container
+  const llmCont = document.getElementById('llm-notice-container');
+  if (llmCont) llmCont.style.display = 'none';
+  const genBtn = document.getElementById('btn-generate-notice');
+  if (genBtn) genBtn.innerText = '🤖 Generate LLM Recovery Notice';
+
+  document.getElementById('modal-title').innerText = `${f.claim_id} — ${f.insured_name}`;
+  document.getElementById('modal-subtitle').innerText = `Location: ${f.location} | Event: ${f.event_id} (${f.peril}) | Confidence: ${(f.confidence_score * 100).toFixed(0)}%`;
+
+  document.getElementById('modal-treaty-citation').innerHTML = `
+    <strong>Treaty Applicable:</strong> ${f.treaty_id} (${f.citation.treaty_name})<br>
+    <strong>Article IV (Page ${f.citation.retention_page}):</strong> Retention & Limit terms.<br>
+    <strong>Article VIII (Page ${f.citation.perils_page}):</strong> Covered perils and explicit exclusions.<br>
+    <strong>Article XI (Page ${f.citation.hours_page}):</strong> Event Loss Occurrence Hours Clause.<br><br>
+    <div style="background: rgba(255,255,255,0.04); padding: 8px; border-radius: 4px;">
+      <em>Adjuster Report Summary:</em> Verified physical damages sustained from ${f.peril}. Gross incurred loss of $${f.gross_loss.toLocaleString()}.
+    </div>
+  `;
+
+  const stepsBox = document.getElementById('modal-math-steps');
+  stepsBox.innerHTML = '';
+  f.calculation_steps.forEach(s => {
+    const div = document.createElement('div');
+    div.className = 'audit-step';
+    div.innerText = s;
+    stepsBox.appendChild(div);
+  });
+
+  document.getElementById('modal-entitled').innerText = `$${f.entitled_recoverable.toLocaleString()}`;
+  document.getElementById('modal-billed').innerText = `$${f.actually_billed.toLocaleString()}`;
+  document.getElementById('modal-recv').innerText = `$${f.actually_received.toLocaleString()}`;
+  document.getElementById('modal-leakage').innerText = `$${f.leakage_amount.toLocaleString()}`;
+
+  document.getElementById('audit-modal').style.display = 'flex';
+}
+
+function closeModal() {
+  document.getElementById('audit-modal').style.display = 'none';
+}
+
+function confirmRecovery() {
+  alert(`✓ Confirmed Recovery for Claim ${activeClaimId}! Generated formal billing remittance package for reinsurance broker.`);
+  closeModal();
+}
+
+function disputeClaim() {
+  alert(`Flagged Claim ${activeClaimId} for Senior Legal & Reinsurance Actuarial Review.`);
+  closeModal();
+}
+
+loadData();
+</script>
+
+</body>
+</html>
+

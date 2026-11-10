@@ -1,0 +1,20 @@
+=== [PAGE 1] ===
+REINSURANCE TREATY AGREEMENT: TR-2025-PROP-01
+Contract: Commercial Property Catastrophe Excess of Loss Treaty
+Type: Per Occurrence Excess of Loss (CAT XOL)
+Reinsurer: Munich Re Syndicate | Intermediary Broker: Aon Reinsurance Solutions
+Effective Period: 2025-01-01 00:01 Local Time to 2025-12-31 24:00 Local Time
+
+=== [PAGE 4] ===
+ARTICLE IV — RETENTION AND LIMIT
+The Company (Insurer) shall retain as its initial net loss retention the sum of USD $2,000,000.00 per event/risk.
+The Reinsurer shall be liable in respect of each loss occurrence for the excess of the Company's net retention up to a maximum limit of liability of USD $10,000,000.00.
+
+=== [PAGE 7] ===
+ARTICLE VIII — COVERED PERILS AND EXCLUSIONS
+Covered Perils: Windstorm, Tornado, Hail, Winter Storm, Freezing, Wildfire
+Explicit Exclusions: Flood, Earthquake, Cyber, War, Nuclear
+
+=== [PAGE 9] ===
+ARTICLE XI — LOSS OCCURRENCE DEFINITION (HOURS CLAUSE)
+All individual property claims arising out of one atmospheric or catastrophe event within a consecutive 72-hour period shall be deemed one single Loss Occurrence for retention and limit aggregation.

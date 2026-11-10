@@ -1,0 +1,923 @@
+
+Biswajit Das
+0 minutes 3 seconds0:03
+Biswajit Das 0 minutes 3 seconds
+And this is this is one of the tools which we are going to have with commercial property, and Assis, Arin, and Shivam, three of those guys will be involving in this particular use case and building this MVP for this, and probably, yeah, over to you Assis, you can go next.
+
+Sayan Ghosh
+0 minutes 3 seconds0:03
+Sayan Ghosh 0 minutes 3 seconds
+Oh, this is new.
+Sayan Ghosh 0 minutes 22 seconds
+OK, good. So, reinsurance use case, that's interesting. I'm a complex and we don't have anything on reinsurance, so I think stand out any which way by choosing a product which nobody else has.
+
+Biswajit Das
+0 minutes 25 seconds0:25
+Biswajit Das 0 minutes 25 seconds
+Yeah.
+Biswajit Das 0 minutes 29 seconds
+Connect, connect.
+Biswajit Das 0 minutes 35 seconds
+Connect.
+
+Sayan Ghosh
+0 minutes 36 seconds0:36
+Sayan Ghosh 0 minutes 36 seconds
+Hey, Abu, Abu, picture the trailer, a picture with OK.
+
+Ashish Chavan
+0 minutes 36 seconds0:36
+Ashish Chavan 0 minutes 36 seconds
+Yes.
+
+Biswajit Das
+0 minutes 40 seconds0:40
+Biswajit Das 0 minutes 40 seconds
+What?
+
+Ashish Chavan
+0 minutes 44 seconds0:44
+Ashish Chavan 0 minutes 44 seconds
+Okay, cool. So basically, the thought process behind this solution is basically, let's, I'm just talking over here about a user story as a reinsurance analyst at a commercial property insurer. And I have taken a very specific LOB because of course, we want to try to build an MVP. So not going very broad.
+Ashish Chavan 1 minute 2 seconds
+a very specific LOB, commercial property insurance. I want to check last year's claim against our treaties and see which recoveries we missed or underbilled. Okay, so that I can claim them from the reinsurance with clear evidence. So basically what I'm trying to send, what my assumption over here is, of course I haven't worked inside reinsurance.
+
+Sayan Ghosh
+1 minute 3 seconds1:03
+Sayan Ghosh 1 minute 3 seconds
+Ahh.
+
+Ashish Chavan
+1 minute 24 seconds1:24
+Ashish Chavan 1 minute 24 seconds
+To be very honest, I'm very new to the insurance domain altogether. But what I believe is wherever that like an insurer gets a reinsurance, all of these documents are in the form of PDFs, Excel, and they are, you know, kind of stored at some place. When actual calamity happens. So for example, let's say a windstorm has set a particular area.
+Ashish Chavan 1 minute 46 seconds
+there will be a lot of claims that are going to get, you know, basically claims are going to come in. And then at that time, we might be missing out on some of the reinsurance payments because the treaty words might not be very clear. The analysts just tried to figure it out and just left it saying that, okay, this won't be a part of the reinsurance or something, or it just went.
+
+Sayan Ghosh
+1 minute 52 seconds1:52
+Sayan Ghosh 1 minute 52 seconds
+Hub.
+
+Ashish Chavan
+2 minutes 6 seconds2:06
+Ashish Chavan 2 minutes 6 seconds
+you know, kind of completely underlooked. Nobody looked at it and it went completely missing. So basically the solution that we are proposing is exactly that, like whatever reinsurance treaties that you will be signing, everybody, everything will go to a LLM agent. And this is more like a backward looking thing, to be very clear. I'm not talking about something like going ahead, we will be doing this. It's more like, okay, the insurance claim
+Ashish Chavan 2 minutes 31 seconds
+have already gone out. I'm just looking at the past data, your past treaties, your past claims.
+
+Sayan Ghosh
+2 minutes 35 seconds2:35
+Sayan Ghosh 2 minutes 35 seconds
+This will always be back date. This will always be a portfolio analysis retrospective. Put it like that. Take it, take it. May I see with that, you're finding out the needle in a haystack that got missed. Anna, so it's always gonna be like that. All right, okay, I'll hold my thought then complete.
+
+Ashish Chavan
+2 minutes 39 seconds2:39
+Ashish Chavan 2 minutes 39 seconds
+Portfolio analysis, retrospective thing. Yes, yes.
+Ashish Chavan 2 minutes 48 seconds
+Yes, got it.
+Ashish Chavan 2 minutes 52 seconds
+Yes.
+
+Sayan Ghosh
+2 minutes 53 seconds2:53
+Sayan Ghosh 2 minutes 53 seconds
+Then I have a couple of questions. Go on.
+
+Ashish Chavan
+2 minutes 58 seconds2:58
+Ashish Chavan 2 minutes 58 seconds
+Yeah. Okay. So basically here we have given up an example like where, you know, each claim, like we got multiple claims and the total claim amount was standing out to be $2.9 million. Now each claim in itself was, you know, less than 2 million, which was our retention limit. So each claim was, you know, kind of categorized that, okay, we cannot go to the reinsurer to claim this, but actually the treaty document looks at this event
+Ashish Chavan 3 minutes 22 seconds
+as one and then the entire, you know, the reinsurance amount was $2.9 million. We billed 0, but we could have actually recovered $0.9 million out of this entire event that had happened. So this is kind of a hypothetical example that I have taken up over here and these are the exact cases like we want to figure out and basically this will happen.
+Ashish Chavan 3 minutes 42 seconds
+have a very straightforward effect on the portfolio because this is like a straight up profit that we are, you know, kind of identifying and flagging it out. Yeah, so that's kind of the basic idea of the entire solution that we are thinking about.
+
+Sayan Ghosh
+3 minutes 55 seconds3:55
+Sayan Ghosh 3 minutes 55 seconds
+This is a great one. So basically you are doing a complete bottom line impact because this is something people don't, it's not even identified as a dollar opportunity. Therefore the right hand side is important, recovered money straight to heart, but your metric that you're impacting.
+Sayan Ghosh 4 minutes 14 seconds
+is why do you call it Recover IQ? That's a name of, it's a marketing name. It will be followed by something that this is a AI enabled analytics model identifying.
+Sayan Ghosh 4 minutes 27 seconds
+Missed reinsurance recovery, right? Which is a complete dollar impact on this. All right, fair point. Acha, Iswana, the one thing that stood out to me, you're right in looking at...
+
+Ashish Chavan
+4 minutes 31 seconds4:31
+Ashish Chavan 4 minutes 31 seconds
+Yeah.
+
+
+Sayan Ghosh
+4 minutes 42 seconds4:42
+Sayan Ghosh 4 minutes 42 seconds
+What was missed? There is, that is one element, like in ye elementa kamuta reinsurance may, because as you yourself said, it's a complicated treaty policy in itself. The miss doesn't happen because somebody didn't even read that the coverage is there. Usually the misses also happens.
+
+Ashish Chavan
+4 minutes 49 seconds4:49
+Ashish Chavan 4 minutes 49 seconds
+Mm.
+
+Sayan Ghosh
+5 minutes 4 seconds5:04
+Sayan Ghosh 5 minutes 4 seconds
+Because.
+Sayan Ghosh 5 minutes 6 seconds
+The treaty clauses were not interpreted correctly; the limits were not applied or calculated correctly. OK, so actually build range, so now and finding that is not easy even for a human eye.
+Sayan Ghosh 5 minutes 23 seconds
+So, reinsurance, so you have to little bit go into the fact, but you have to add an element here, which is the deal breaker, is how do we use, you know, basically a recovery leakage detection or a claim to treaty matching, etcetera, etcetera.
+
+Ashish Chavan
+5 minutes 23 seconds5:23
+Ashish Chavan 5 minutes 23 seconds
+Correct.
+
+Sayan Ghosh
+5 minutes 47 seconds5:47
+Sayan Ghosh 5 minutes 47 seconds
+Actually, here what is called treaty car treaty policy?
+Sayan Ghosh 5 minutes 53 seconds
+Intelligence agent of Telario, and I'm sure you're going to apply Gen. AI extract pointers, attachments, limits, exclusions, right? You have to highlight for everything that you ingest for every treaty policy that you ingest.
+
+Ashish Chavan
+5 minutes 59 seconds5:59
+Ashish Chavan 5 minutes 59 seconds
+Yes.
+Ashish Chavan 6 minutes 3 seconds
+Thanks.
+
+
+Sayan Ghosh
+6 minutes 12 seconds6:12
+Sayan Ghosh 6 minutes 12 seconds
+You have to convert all that unstructured and structured information into attachment point, limit dollars, exclusion dollars, reinstatements, expense treatment, you to convert all of that into a modular element against which then you check the actual.
+Sayan Ghosh 6 minutes 31 seconds
+work in it and you have to show it on the screen. So my submission is what got missed is the easier part. Parts what are getting missed is the majority opportunity that you have to for which the team has to talk about how are you.
+
+Ashish Chavan
+6 minutes 32 seconds6:32
+Ashish Chavan 6 minutes 32 seconds
+Okay. Okay.
+
+Sayan Ghosh
+6 minutes 52 seconds6:52
+Sayan Ghosh 6 minutes 52 seconds
+Interpreting a very complex treaty policy.
+Sayan Ghosh 6 minutes 56 seconds
+Perfectly, so it's almost like I mean just contextual read, summarize, but then look for that each of these elements attachment point, limit exclusion, reinstatement, expense treatment, right? Then there is a loss sharing arrangement, right?
+
+Ashish Chavan
+7 minutes 7 seconds7:07
+Ashish Chavan 7 minutes 7 seconds
+Yes.
+Ashish Chavan 7 minutes 12 seconds
+Mm.
+
+Sayan Ghosh
+7 minutes 16 seconds7:16
+Sayan Ghosh 7 minutes 16 seconds
+Primary, primary layer, secondary layer, I forgot back calculating something, so you'll have to show it, but I am very happy, and I'm sure they'll be also very happy that reinsurance AI model doing this in Excel exists.
+
+Ashish Chavan
+7 minutes 23 seconds7:23
+Ashish Chavan 7 minutes 23 seconds
+Yes.
+
+Sayan Ghosh
+7 minutes 36 seconds7:36
+Sayan Ghosh 7 minutes 36 seconds
+We have all the insurance.
+Sayan Ghosh 7 minutes 40 seconds
+VP or Team who does that and one of my ex team members actually runs that as a domain SME on that.
+
+
+
+Ashish Chavan
+7 minutes 48 seconds7:48
+Ashish Chavan 7 minutes 48 seconds
+Okay.
+
+Sayan Ghosh
+7 minutes 49 seconds7:49
+Sayan Ghosh 7 minutes 49 seconds
+So, so see, I can, I know that what are those misses that happened. So, fair point. So, your key thing is, how do you generate synthetically a treaty policy or a bunch of treaty policies, and then do some research to extract the...
+
+Ashish Chavan
+7 minutes 54 seconds7:54
+Ashish Chavan 7 minutes 54 seconds
+Okay.
+Ashish Chavan 8 minutes 4 seconds
+Correct.
+
+Sayan Ghosh
+8 minutes 7 seconds8:07
+Sayan Ghosh 8 minutes 7 seconds
+critical pointers which have got a dollar bearing for you to do that.
+
+Ashish Chavan
+8 minutes 12 seconds8:12
+Ashish Chavan 8 minutes 12 seconds
+Perfect, yeah, so that...
+
+Sayan Ghosh
+8 minutes 12 seconds8:12
+Sayan Ghosh 8 minutes 12 seconds
+OK, so this is 11 element on on on this file. OK, what else? Go on.
+
+Ashish Chavan
+8 minutes 17 seconds8:17
+Ashish Chavan 8 minutes 17 seconds
+Yes.
+Ashish Chavan 8 minutes 19 seconds
+Yeah, so basically that was the main point. So these are the synthetic data we were planning to generate. So we will be having treaty documents. So like given the timeline and all, we were thinking of creating around 3 treaty policies. Of course, we have, we need to, you know, read more about how these treaty policies in practice look like. Then of course, we will use LLMs to generate these treaty policies. So we will leverage.
+Ashish Chavan 8 minutes 43 seconds
+them as well. But yeah, in itself, like as a team, we will have to look into these, how these treaty policies, as you rightly said, we have to make some treaty policies to be a bit more complicated, which are very much difficult for a common human to just go through it and reason through it. And then we can probably leverage that saying that, okay, so these are very difficult to interpret.
+Ashish Chavan 9 minutes 5 seconds
+But these are the swarm of agent who have reason through it and then created a structured JSON out of it.
+
+Sayan Ghosh
+9 minutes 11 seconds9:11
+Sayan Ghosh 9 minutes 11 seconds
+Except this, and you have a Mister Jito directly help Kuldeep. I had a very light model. See, when you when we are looking at our policy Kritika and calculating recover depending on the contract.
+Sayan Ghosh 9 minutes 29 seconds
+All those six, 7 parameters we spoke about. This one, the other lens to look at it is, has that been, has there been a claim loss recovered in the past or not? So suppose you are eligible as per the contract for, you know, 100,000 primary layer.
+Sayan Ghosh 9 minutes 48 seconds
+Take it, but you need to know historically by financial year right or treaty occurrence basis or treaty basis policy, so it's almost like summarization kinds.
+Sayan Ghosh 10 minutes 7 seconds
+Of how light module is just that they will, it's just that ingest the past claims data, roll it up at a loss run for this particular treaty policy, etcetera, etcetera, so eligible per contract 100K, already claimed twenty-five K, and that balance you have to.
+Sayan Ghosh 10 minutes 31 seconds
+Getting some historical claims under the same contract as well, so it's very light, but the concept is cumulate the past losses by FY year and then see what's left in the kitty as well, reinsurance.
+
+Biswajit Das
+10 minutes 34 seconds10:34
+Biswajit Das 10 minutes 34 seconds
+Okay.
+
+
+Ashish Chavan
+10 minutes 47 seconds10:47
+Ashish Chavan 10 minutes 47 seconds
+Yeah, that can be the analytical part of it. Okay.
+
+Sayan Ghosh
+10 minutes 51 seconds10:51
+Sayan Ghosh 10 minutes 51 seconds
+And again.
+
+Biswajit Das
+10 minutes 51 seconds10:51
+Biswajit Das 10 minutes 51 seconds
+Yes, then.
+Biswajit Das 10 minutes 53 seconds
+Just an overview regarding how that is impacting the whole right, with the loss and financials based upon various documents on the treaty as well.
+
+Ashish Chavan
+10 minutes 53 seconds10:53
+Ashish Chavan 10 minutes 53 seconds
+Yes.
+
+Sayan Ghosh
+11 minutes 7 seconds11:07
+Sayan Ghosh 11 minutes 7 seconds
+So, obviously, those are industry formulation of the calculations, but you know, quota share other percentage mentioned here usually contract percentage mentioned with a primary layer 100K so quota share percentage.
+
+Ashish Chavan
+11 minutes 7 seconds11:07
+Ashish Chavan 11 minutes 7 seconds
+Okay.
+
+Biswajit Das
+11 minutes 13 seconds11:13
+Biswajit Das 11 minutes 13 seconds
+Is.
+
+Ashish Chavan
+11 minutes 22 seconds11:22
+Ashish Chavan 11 minutes 22 seconds
+Mm.
+
+Sayan Ghosh
+11 minutes 31 seconds11:31
+Sayan Ghosh 11 minutes 31 seconds
+You know, have those calculations, so when you extract from the policy document, you're going to get percentages, right? But then you have to translate it into dollars, right? Then, per risk catastrophe, yeah, occurrence catastrophe, aggregate recovery, so, so basically there's a recovery calculation engine.
+Sayan Ghosh 11 minutes 50 seconds
+Detail, and I'm sure I saw something on your screen, uh, which we can name it as Calculator.
+
+Ashish Chavan
+11 minutes 55 seconds11:55
+Ashish Chavan 11 minutes 55 seconds
+Ohh.
+Ashish Chavan 11 minutes 58 seconds
+So, I am thinking this, right? You are talking about this, right? Calculate and compare, like, calculation engine. So, this is, so these are all fixed rules. So, all those in light blue are fixed rules. These are not AI steps. AI steps in this thing is only this. It reads the treaty document and then it will, you know, convert that treaty into a JSON, like...
+
+Sayan Ghosh
+12 minutes 5 seconds12:05
+Sayan Ghosh 12 minutes 5 seconds
+I see. OK, yeah, yeah, correct, correct.
+Sayan Ghosh 12 minutes 18 seconds
+So, you fixed rules of castle. OK, where will you get the fixed rules from?
+
+Ashish Chavan
+12 minutes 20 seconds12:20
+Ashish Chavan 12 minutes 20 seconds
+Oh.
+Ashish Chavan 12 minutes 23 seconds
+Right now, to be very honest, like we haven't thought of it. We thought of it like there will be some fixed rules in the industry for sure. And subject matter experts must be knowing it. It is like a blog to us. And then we will probably fill it with some generic rules that we could find online and something like that. And that could always be enhanced, right? At the end of the day, it's just a rule engine.
+
+Sayan Ghosh
+12 minutes 41 seconds12:41
+Sayan Ghosh 12 minutes 41 seconds
+Ticket.
+Sayan Ghosh 12 minutes 44 seconds
+I agree, I agree. So, obviously, none of us are reinsurance treaty experts. We are building a model by feature selection and pre-fed rule engine, which can be, you know, kind of a minimum viable product, 80% also is fine. I don't need to show them 100%, but that's fine. So, ABSCO.
+
+Ashish Chavan
+13 minutes 1 second13:01
+Ashish Chavan 13 minutes 1 second
+Yes.
+
+Sayan Ghosh
+13 minutes 6 seconds13:06
+Sayan Ghosh 13 minutes 6 seconds
+Okay, then the one more element that comes to my mind, I hope you're writing down the pointers we're discussing somebody in your team.
+Sayan Ghosh 13 minutes 20 seconds
+So, when you do the...
+Sayan Ghosh 13 minutes 22 seconds
+calculate and compare and before it comes to an or at the review stage, you're basically running a reconciliation intelligence agent. I'm just saying optically, think of it as two agents, two or three agents, right? One agent is actually a treaty.
+
+Ashish Chavan
+13 minutes 35 seconds13:35
+Ashish Chavan 13 minutes 35 seconds
+Mhm.
+
+Sayan Ghosh
+13 minutes 40 seconds13:40
+Sayan Ghosh 13 minutes 40 seconds
+Policy intelligence agent, so I'm saying, and Miss Rohit, this help me articulate it in a different way, the way you talk to your teams, but I'm almost thinking, you transfer message, you know, it's a treaty.
+Sayan Ghosh 14 minutes
+Policy intelligence agent, it deals everything at a policy level, which is a rule engine calculation agent and order recovery calculation agent, and then reconciliation agent, so basically show it as you know.
+
+Biswajit Das
+14 minutes 4 seconds14:04
+Biswajit Das 14 minutes 4 seconds
+TE.
+
+Sayan Ghosh
+14 minutes 19 seconds14:19
+Sayan Ghosh 14 minutes 19 seconds
+Uh, you know, kind of a sub-agent level, but at least show it as modular, one feeding to the other, so that you show output of every step sequentially. It'll be easier to storytell, because this is a complex product.
+
+Biswajit Das
+14 minutes 34 seconds14:34
+Biswajit Das 14 minutes 34 seconds
+Yeah, yeah, so basically sign is mentioning on the front end part where we need to showcase the action of each agent to the other and how the information is flowing from one stage to another, right? So let's say if it is we are building one particular agent on verifying or reading the documents regarding the treaty and coming up some.
+
+Sayan Ghosh
+14 minutes 35 seconds14:35
+Sayan Ghosh 14 minutes 35 seconds
+Deepak, yeah.
+
+Biswajit Das
+14 minutes 53 seconds14:53
+Biswajit Das 14 minutes 53 seconds
+of the key values from those right and from there how these key values are getting captured and applied over in a rule based approaches and how that is again being conjured for a review right. So all those steps should be interconnected and should be showcased in a final.
+Biswajit Das 15 minutes 12 seconds
+way which we do usually rate. So Sivam already in our team has already done in one of our initiative in cyber rating so he knows how to do that as well.
+
+Sayan Ghosh
+15 minutes 23 seconds15:23
+Sayan Ghosh 15 minutes 23 seconds
+I missed it, Shivam.
+
+Biswajit Das
+15 minutes 25 seconds15:25
+Biswajit Das 15 minutes 25 seconds
+Yeah, yeah, see them.
+
+Ashish Chavan
+15 minutes 26 seconds15:26
+Ashish Chavan 15 minutes 26 seconds
+So, Modi Manojkumar is Shivam.
+
+Sayan Ghosh
+15 minutes 27 seconds15:27
+Sayan Ghosh 15 minutes 27 seconds
+Yeah.
+
+Biswajit Das
+15 minutes 28 seconds15:28
+Biswajit Das 15 minutes 28 seconds
+Madhu Manish Kumari, Sivam only.
+
+Sayan Ghosh
+15 minutes 32 seconds15:32
+Sayan Ghosh 15 minutes 32 seconds
+Yeah.
+
+Biswajit Das
+15 minutes 34 seconds15:34
+Biswajit Das 15 minutes 34 seconds
+Yeah.
+
+Ashish Chavan
+15 minutes 35 seconds15:35
+Ashish Chavan 15 minutes 35 seconds
+Yeah.
+Ashish Chavan 15 minutes 37 seconds
+Yeah.
+
+Biswajit Das
+15 minutes 38 seconds15:38
+Biswajit Das 15 minutes 38 seconds
+My Gujarat.
+
+Sayan Ghosh
+15 minutes 40 seconds15:40
+Sayan Ghosh 15 minutes 40 seconds
+Modi Modi, that was an enlightened note. All right, okay, so, but for me, technically, the detailed and the most important one is your is going to be your recovery calculation agent. This may all your calculations need to be prefed, not calculations, your ontology needs to be prefed.
+
+Ashish Chavan
+15 minutes 44 seconds15:44
+Ashish Chavan 15 minutes 44 seconds
+This is.
+
+Biswajit Das
+15 minutes 44 seconds15:44
+Biswajit Das 15 minutes 44 seconds
+Ohh.
+
+Ashish Chavan
+15 minutes 58 seconds15:58
+Ashish Chavan 15 minutes 58 seconds
+Okay.
+
+Sayan Ghosh
+16 minutes 4 seconds16:04
+Sayan Ghosh 16 minutes 4 seconds
+Defed.
+Sayan Ghosh 16 minutes 6 seconds
+Access of loss, primary layer, stop loss. These are technical terms, predefined, defined within that rule engine, and against each of them, optically, let's say you have you get.
+
+Ashish Chavan
+16 minutes 8 seconds16:08
+Ashish Chavan 16 minutes 8 seconds
+Yes.
+
+Sayan Ghosh
+16 minutes 26 seconds16:26
+Sayan Ghosh 16 minutes 26 seconds
+Predefined calculations for 1012 metrics of reinsurance, search, research, use copilot also, yeah, any other.
+Sayan Ghosh 16 minutes 38 seconds
+Yeah, to even let you do the search against those 12, her 12 identified, calculated, derived number.
+
+Ashish Chavan
+16 minutes 47 seconds16:47
+Ashish Chavan 16 minutes 47 seconds
+Okay.
+
+Sayan Ghosh
+16 minutes 48 seconds16:48
+Sayan Ghosh 16 minutes 48 seconds
+And confidence percentage in that crowd.
+
+Ashish Chavan
+16 minutes 52 seconds16:52
+Ashish Chavan 16 minutes 52 seconds
+So every number must be justified with confidence.
+
+Sayan Ghosh
+16 minutes 55 seconds16:55
+Sayan Ghosh 16 minutes 55 seconds
+It's with confidence and confidence score, so basically make it usable on this one, right? So, I think, yeah, this is good enough to one last pointer, what are the ingestion documents that you are planning for?
+
+Ashish Chavan
+17 minutes 2 seconds17:02
+Ashish Chavan 17 minutes 2 seconds
+Okay.
+Ashish Chavan 17 minutes 5 seconds
+No.
+
+Sayan Ghosh
+17 minutes 16 seconds17:16
+Sayan Ghosh 17 minutes 16 seconds
+Just talk to me about that. I can help you on water elements.
+
+Ashish Chavan
+17 minutes 17 seconds17:17
+Ashish Chavan 17 minutes 17 seconds
+So, these are the in the data, so these are the ones.
+
+Sayan Ghosh
+17 minutes 23 seconds17:23
+Sayan Ghosh 17 minutes 23 seconds
+So, treaty document, claim list, claim report, event list, recovery records, answer key. OK, I'm gonna after reserves Dalian as well.
+
+Ashish Chavan
+17 minutes 34 seconds17:34
+Ashish Chavan 17 minutes 34 seconds
+Sorry.
+
+Sayan Ghosh
+17 minutes 35 seconds17:35
+Sayan Ghosh 17 minutes 35 seconds
+Have you included reserves?
+
+Ashish Chavan
+17 minutes 39 seconds17:39
+Ashish Chavan 17 minutes 39 seconds
+No, I'm sorry.
+
+Sayan Ghosh
+17 minutes 39 seconds17:39
+Sayan Ghosh 17 minutes 39 seconds
+No, you have it. You need to have it. No, you have to basically, Keona.
+
+Ashish Chavan
+17 minutes 42 seconds17:42
+Ashish Chavan 17 minutes 42 seconds
+Okay.
+
+Sayan Ghosh
+17 minutes 44 seconds17:44
+Sayan Ghosh 17 minutes 44 seconds
+The reserves paid losses go to the paid losses is that loss run equivalent that I told you. The losses pay under this policy. It's almost like a combination submission of a loss run that you've done and case reserves. Then the other very important feed that you have not included is reinsurance. You'll come across a file.
+
+Ashish Chavan
+17 minutes 51 seconds17:51
+Ashish Chavan 17 minutes 51 seconds
+Mm.
+
+Sayan Ghosh
+18 minutes 6 seconds18:06
+Sayan Ghosh 18 minutes 6 seconds
+Ingested in all treaty or reinsurance contracts is broker sends statements.
+Sayan Ghosh 18 minutes 15 seconds
+Which is called Bodrio, Bodrio B.D. export, this.
+
+Ashish Chavan
+18 minutes 18 seconds18:18
+Ashish Chavan 18 minutes 18 seconds
+No.
+Ashish Chavan 18 minutes 21 seconds
+Okay.
+
+Biswajit Das
+18 minutes 22 seconds18:22
+Biswajit Das 18 minutes 22 seconds
+Nobody SSI and nobody has worked on the incidents, so they have just articulated that from that. I have also said to them that we should come up with a tool which is not common for anybody within the Excel, and we should choose an LOB, right? So they will be developing those skill set once they'll be working on those as well.
+
+Sayan Ghosh
+18 minutes 25 seconds18:25
+Sayan Ghosh 18 minutes 25 seconds
+And.
+Sayan Ghosh 18 minutes 42 seconds
+But broke one of your ingestion documents needs to be a broker border document. OK, synthetic generation any you know, AI that you tell it to generate a synthetic one, but please use this one.
+
+Ashish Chavan
+18 minutes 49 seconds18:49
+Ashish Chavan 18 minutes 49 seconds
+Okay.
+Ashish Chavan 18 minutes 54 seconds
+Okay.
+Ashish Chavan 18 minutes 59 seconds
+And why is it useful, like broker?
+
+Sayan Ghosh
+19 minutes 5 seconds19:05
+Sayan Ghosh 19 minutes 5 seconds
+Reinsurance placement and reinsurance claim directly broker so real world if Excel has a reinsurance contract with AIG because these are complex primary layer secondary layer if you.
+Sayan Ghosh 19 minutes 24 seconds
+Don't already know. Reinsurance are very big risks, right? Space shuttle, billions of dollars being this thing. It's insured for...
+Sayan Ghosh 19 minutes 37 seconds
+One billion dollars ticket, a satellite launcher, you know, first 50, first 1 million.
+
+Ashish Chavan
+19 minutes 39 seconds19:39
+Ashish Chavan 19 minutes 39 seconds
+Okay.
+
+Sayan Ghosh
+19 minutes 48 seconds19:48
+Sayan Ghosh 19 minutes 48 seconds
+is born by travelers. That's a layer. Then the second layer comes is 1,000,000 to 2 million is taken up by Liberty. Then 2,000,000 to 5 million is taken up by Nationwide. Asset stack, right?
+
+Ashish Chavan
+19 minutes 57 seconds19:57
+Ashish Chavan 19 minutes 57 seconds
+Okay.
+
+Sayan Ghosh
+20 minutes 8 seconds20:08
+Sayan Ghosh 20 minutes 8 seconds
+contract reinsurance banana mego Das insurance company say deal karke a statement a contract banata.
+Sayan Ghosh 20 minutes 15 seconds
+Okay, so indeed, so when the claim happens, the satellite company will reach out to the broker, and then the broker will send documents to all these insurance companies, or some insurance companies calculation.
+Sayan Ghosh 20 minutes 33 seconds
+So, therefore, a broker, but you generate Google broker, sorry features that show up in just.
+
+Ashish Chavan
+20 minutes 42 seconds20:42
+Ashish Chavan 20 minutes 42 seconds
+Okay.
+
+Sayan Ghosh
+20 minutes 43 seconds20:43
+Sayan Ghosh 20 minutes 43 seconds
+So, policy document, yeah, treaty policy, reinsurance contract is 1, then broker statement of records statement of losses easily ingestible, but just show it optically that your primary source has not won it, not these five on slide.
+
+Ashish Chavan
+20 minutes 54 seconds20:54
+Ashish Chavan 20 minutes 54 seconds
+Oh.
+
+Sayan Ghosh
+21 minutes 3 seconds21:03
+Sayan Ghosh 21 minutes 3 seconds
+But there are six and 7th also, which are equally important.
+
+Ashish Chavan
+21 minutes 8 seconds21:08
+Ashish Chavan 21 minutes 8 seconds
+Okay, good.
+
+Sayan Ghosh
+21 minutes 10 seconds21:10
+Sayan Ghosh 21 minutes 10 seconds
+Even though you can keep it lighter, right, but you still have to show it that you are ingesting and you know about it, XYX, right.
+
+Ashish Chavan
+21 minutes 17 seconds21:17
+Ashish Chavan 21 minutes 17 seconds
+Okay.
+
+Biswajit Das
+21 minutes 17 seconds21:17
+Biswajit Das 21 minutes 17 seconds
+Are we are we so the one which you are showcasing Sayan, so that one can you send us on the chat as well?
+
+Ashish Chavan
+21 minutes 27 seconds21:27
+Ashish Chavan 21 minutes 27 seconds
+No, no, no, we'll make a rather, make a that though, sorry.
+
+Biswajit Das
+21 minutes 29 seconds21:29
+Biswajit Das 21 minutes 29 seconds
+Okay, okay, okay, okay.
+
+Ashish Chavan
+21 minutes 31 seconds21:31
+Ashish Chavan 21 minutes 31 seconds
+May I just Google search key? I'm not sure if this is the correct one.
+
+Sayan Ghosh
+21 minutes 34 seconds21:34
+Sayan Ghosh 21 minutes 34 seconds
+Yeah, yeah, correct, correct. I see milling, I click, so hold on, hold on.
+
+Ashish Chavan
+21 minutes 38 seconds21:38
+Ashish Chavan 21 minutes 38 seconds
+Okay.
+Ashish Chavan 21 minutes 41 seconds
+Hmm.
+
+Sayan Ghosh
+21 minutes 42 seconds21:42
+Sayan Ghosh 21 minutes 42 seconds
+It's a good, simplified version to read through. Casio contract me so 7 click on the Boudreaux tab.
+Sayan Ghosh 21 minutes 53 seconds
+Your 7 number.
+
+Ashish Chavan
+21 minutes 53 seconds21:53
+Ashish Chavan 21 minutes 53 seconds
+Uh, okay, but yeah, clickable, I said, yeah, just take Acha dev data.
+
+Sayan Ghosh
+21 minutes 58 seconds21:58
+Sayan Ghosh 21 minutes 58 seconds
+So, for you to, this is one of the rules that this guy is showing, but after he can document, we used to do on this one, but yeah.
+
+Biswajit Das
+22 minutes 9 seconds22:09
+Biswajit Das 22 minutes 9 seconds
+Mhm.
+
+Ashish Chavan
+22 minutes 13 seconds22:13
+Ashish Chavan 22 minutes 13 seconds
+Okay.
+
+Sayan Ghosh
+22 minutes 16 seconds22:16
+Sayan Ghosh 22 minutes 16 seconds
+generate as a very important ingestion document.
+
+Ashish Chavan
+22 minutes 20 seconds22:20
+Ashish Chavan 22 minutes 20 seconds
+Perfect, good.
+
+Sayan Ghosh
+22 minutes 21 seconds22:21
+Sayan Ghosh 22 minutes 21 seconds
+And the way I explained that 1 billion of a policy is split by different layers across multiple companies. That makes it pretty complicated to calculate back.
+Sayan Ghosh 22 minutes 37 seconds
+Miscalculate, so your pivot changes and your positioning changes that you're not looking for complete misses, you're looking for miscalculations.
+
+Ashish Chavan
+22 minutes 42 seconds22:42
+Ashish Chavan 22 minutes 42 seconds
+Mm.
+
+Sayan Ghosh
+22 minutes 56 seconds22:56
+Sayan Ghosh 22 minutes 56 seconds
+which leads up to millions of dollars for a reinsurance company.
+Sayan Ghosh 23 minutes 1 second
+It's a direct bottom line, so it's a very good topic that you picked up. Use AI to get your crash course on what feature selection you need to do. Make ingestion, ingest these documents, and it should be fine. You should be fine.
+Sayan Ghosh 23 minutes 18 seconds
+Actually, I just made this search here, you don't need to do all of them, but...
+Sayan Ghosh 23 minutes 30 seconds
+I mean, typically, yes.
+
+Ashish Chavan
+23 minutes 36 seconds23:36
+Ashish Chavan 23 minutes 36 seconds
+Okay.
+
+Sayan Ghosh
+23 minutes 37 seconds23:37
+Sayan Ghosh 23 minutes 37 seconds
+Yeah, list of the.
+Sayan Ghosh 23 minutes 40 seconds
+Especially is one of them, as you see, broker statements, but all of this put together will even ignore cat event, geospatial data, correspondence, notices, but policy exposure, yes, claim headers, transaction history is the last run that I mentioned.
+
+Ashish Chavan
+23 minutes 49 seconds23:49
+Ashish Chavan 23 minutes 49 seconds
+Mmh.
+Ashish Chavan 23 minutes 58 seconds
+Mmh.
+
+Sayan Ghosh
+23 minutes 58 seconds23:58
+Sayan Ghosh 23 minutes 58 seconds
+Case is a paid losses is also the loss run. ALAULA actuarial technical. You can keep it light, like in the treaty contract, facultative certificates, board rows, just pick top five, six, key five, six of them as ingestion fines.
+
+Ashish Chavan
+24 minutes 17 seconds24:17
+Ashish Chavan 24 minutes 17 seconds
+Okay.
+
+Sayan Ghosh
+24 minutes 18 seconds24:18
+Sayan Ghosh 24 minutes 18 seconds
+So, it will just make your things more richer.
+
+Ashish Chavan
+24 minutes 23 seconds24:23
+Ashish Chavan 24 minutes 23 seconds
+Love it.
+
+Sayan Ghosh
+24 minutes 25 seconds24:25
+Sayan Ghosh 24 minutes 25 seconds
+Yeah, but.
+
+Ashish Chavan
+24 minutes 28 seconds24:28
+Ashish Chavan 24 minutes 28 seconds
+Okay, then.
+
+Sayan Ghosh
+24 minutes 28 seconds24:28
+Sayan Ghosh 24 minutes 28 seconds
+But one request, then all of you will have to back each other because you're going, you picked up a good product with nobody has. And the company does not have this kind of thing. So very highly likely that there'll be a lot of interest in this. Very highly likely that this will go forward.
+
+Ashish Chavan
+24 minutes 30 seconds24:30
+Ashish Chavan 24 minutes 30 seconds
+Yeah.
+
+Sayan Ghosh
+24 minutes 47 seconds24:47
+Sayan Ghosh 24 minutes 47 seconds
+But it all depends on, you know, how much meat you can get onto the.
+Sayan Ghosh 24 minutes 52 seconds
+Feasibility, don't worry, even if you do it Pareto 80%, nobody's expecting you solve the world with 100% accuracy, etc. Just, you know, we'll co-develop it together and transform later, right? But you, but at least show.
+
+Ashish Chavan
+25 minutes 7 seconds25:07
+Ashish Chavan 25 minutes 7 seconds
+Ohh.
+
+Sayan Ghosh
+25 minutes 11 seconds25:11
+Sayan Ghosh 25 minutes 11 seconds
+The correctness of the ingestion point show the correctness of the measures, even if they are not full stack, but product complexity here and show the complexity of translation and calculation on your screens in the UIX.
+
+Ashish Chavan
+25 minutes 20 seconds25:20
+Ashish Chavan 25 minutes 20 seconds
+Mm.
+Ashish Chavan 25 minutes 32 seconds
+Okay.
+
+Sayan Ghosh
+25 minutes 33 seconds25:33
+Sayan Ghosh 25 minutes 33 seconds
+Yeah, if we help you, please. I got a good domain.
+
+Ashish Chavan
+25 minutes 37 seconds25:37
+Ashish Chavan 25 minutes 37 seconds
+So, yeah, that that that is the last part. So, in the risk itself, the first thing that I had no insurance expert in the team, so basically, in terms of subject matter expert, so...
+
+Sayan Ghosh
+25 minutes 52 seconds25:52
+Sayan Ghosh 25 minutes 52 seconds
+Given the time, I have the person right, but so your best friend is AI today, which in our times never existed. A few years ago when I was doing this, I would have gone to that person, spent...
+
+Ashish Chavan
+25 minutes 55 seconds25:55
+Ashish Chavan 25 minutes 55 seconds
+Mm.
+Ashish Chavan 26 minutes 2 seconds
+No.
+
+Sayan Ghosh
+26 minutes 11 seconds26:11
+Sayan Ghosh 26 minutes 11 seconds
+Lots of time understanding on calls and read through Google document. Even copilot don't need to go to plot.
+
+Ashish Chavan
+26 minutes 12 seconds26:12
+Ashish Chavan 26 minutes 12 seconds
+Mm.
+Ashish Chavan 26 minutes 17 seconds
+But...
+Ashish Chavan 26 minutes 19 seconds
+Hmm.
+
+Sayan Ghosh
+26 minutes 22 seconds26:22
+Sayan Ghosh 26 minutes 22 seconds
+Summarized way, right? Just make the right prompt, so use that. Nobody is an expert in reinsurance, by the way, subject matter S.M.E. subject matter expert, subject matter aware.
+
+Ashish Chavan
+26 minutes 42 seconds26:42
+Ashish Chavan 26 minutes 42 seconds
+Of.
+
+Sayan Ghosh
+26 minutes 45 seconds26:45
+Sayan Ghosh 26 minutes 45 seconds
+Reinsurance, don't worry, so you don't, you delete that line. AI is your friend to get to there, use copilot, limited time, limited time, don't target completeness, target the meteor part to show that, yeah, I mean...
+
+Ashish Chavan
+26 minutes 48 seconds26:48
+Ashish Chavan 26 minutes 48 seconds
+Okay.
+Ashish Chavan 26 minutes 52 seconds
+And.
+
+Sayan Ghosh
+27 minutes 4 seconds27:04
+Sayan Ghosh 27 minutes 4 seconds
+I can, if I've done fifty-sixty percent of the art of possible, I can do the other 40% also, but a concept approach complexity appreciate agents, sub-agents, we'll make it more meatier, so you don't worry about the limited time.
+Sayan Ghosh 27 minutes 23 seconds
+So, go.
+Sayan Ghosh 27 minutes 25 seconds
+broad rather than go depth, but touch everything in the breadth of it, not depth.
+Sayan Ghosh 27 minutes 32 seconds
+You gotta.
+Sayan Ghosh 27 minutes 34 seconds
+Given your topic.
+
+Biswajit Das
+27 minutes 37 seconds27:37
+Biswajit Das 27 minutes 37 seconds
+Okay.
+
+Sayan Ghosh
+27 minutes 39 seconds27:39
+Sayan Ghosh 27 minutes 39 seconds
+Yeah, good, Chandra, fantastic.
+
+Biswajit Das
+27 minutes 39 seconds27:39
+Biswajit Das 27 minutes 39 seconds
+Thank you, thank you, Sayan, thank you, sir.
+
+Sayan Ghosh
+27 minutes 41 seconds27:41
+Sayan Ghosh 27 minutes 41 seconds
+All right, thanks. Bye.
+
+Ashish Chavan
+27 minutes 42 seconds27:42
+Ashish Chavan 27 minutes 42 seconds
+Thank you.

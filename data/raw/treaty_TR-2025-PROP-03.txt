@@ -1,0 +1,20 @@
+=== [PAGE 1] ===
+REINSURANCE TREATY AGREEMENT: TR-2025-PROP-03
+Contract: Commercial Property Aggregate Stop Loss Treaty
+Type: Annual Aggregate Stop Loss
+Reinsurer: Hannover Re | Intermediary Broker: Gallagher Re
+Effective Period: 2025-01-01 00:01 Local Time to 2025-12-31 24:00 Local Time
+
+=== [PAGE 5] ===
+ARTICLE IV — RETENTION AND LIMIT
+The Company (Insurer) shall retain as its initial net loss retention the sum of USD $15,000,000.00 per event/risk.
+The Reinsurer shall be liable in respect of each loss occurrence for the excess of the Company's net retention up to a maximum limit of liability of USD $20,000,000.00.
+
+=== [PAGE 8] ===
+ARTICLE VIII — COVERED PERILS AND EXCLUSIONS
+Covered Perils: Windstorm, Fire, Winter Storm, Explosion, Wildfire
+Explicit Exclusions: Flood, Earthquake, Cyber
+
+=== [PAGE 11] ===
+ARTICLE XI — LOSS OCCURRENCE DEFINITION (HOURS CLAUSE)
+All individual property claims arising out of one atmospheric or catastrophe event within a consecutive 168-hour period shall be deemed one single Loss Occurrence for retention and limit aggregation.

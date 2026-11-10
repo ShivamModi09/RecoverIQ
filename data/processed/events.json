@@ -1,0 +1,98 @@
+[
+  {
+    "event_id": "CAT-2025-01",
+    "name": "Winter Storm Grayson",
+    "peril": "Winter Storm",
+    "start_date": "2025-01-14",
+    "end_date": "2025-01-17",
+    "treaty_id": "TR-2025-PROP-01"
+  },
+  {
+    "event_id": "CAT-2025-02",
+    "name": "Windstorm Vance (Motivating Case)",
+    "peril": "Windstorm",
+    "start_date": "2025-03-02",
+    "end_date": "2025-03-04",
+    "treaty_id": "TR-2025-PROP-01"
+  },
+  {
+    "event_id": "CAT-2025-03",
+    "name": "Tornado Outbreak Central",
+    "peril": "Tornado",
+    "start_date": "2025-04-10",
+    "end_date": "2025-04-12",
+    "treaty_id": "TR-2025-PROP-01"
+  },
+  {
+    "event_id": "CAT-2025-04",
+    "name": "Midwest Hail Supercell",
+    "peril": "Hail",
+    "start_date": "2025-05-18",
+    "end_date": "2025-05-19",
+    "treaty_id": "TR-2025-PROP-01"
+  },
+  {
+    "event_id": "CAT-2025-05",
+    "name": "Chemical Plant Fire Cluster",
+    "peril": "Fire",
+    "start_date": "2025-06-05",
+    "end_date": "2025-06-06",
+    "treaty_id": "TR-2025-PROP-02"
+  },
+  {
+    "event_id": "CAT-2025-06",
+    "name": "Wildfire Diablo Surge",
+    "peril": "Wildfire",
+    "start_date": "2025-07-22",
+    "end_date": "2025-07-25",
+    "treaty_id": "TR-2025-PROP-01"
+  },
+  {
+    "event_id": "CAT-2025-07",
+    "name": "Hurricane Helene Peripheral Wind",
+    "peril": "Windstorm",
+    "start_date": "2025-08-11",
+    "end_date": "2025-08-14",
+    "treaty_id": "TR-2025-PROP-01"
+  },
+  {
+    "event_id": "CAT-2025-08",
+    "name": "Industrial Complex Explosion",
+    "peril": "Explosion",
+    "start_date": "2025-09-02",
+    "end_date": "2025-09-03",
+    "treaty_id": "TR-2025-PROP-02"
+  },
+  {
+    "event_id": "CAT-2025-09",
+    "name": "Derecho Windstorm West",
+    "peril": "Windstorm",
+    "start_date": "2025-10-04",
+    "end_date": "2025-10-06",
+    "treaty_id": "TR-2025-PROP-01"
+  },
+  {
+    "event_id": "CAT-2025-10",
+    "name": "Great Lakes Early Freeze",
+    "peril": "Freezing",
+    "start_date": "2025-11-15",
+    "end_date": "2025-11-17",
+    "treaty_id": "TR-2025-PROP-01"
+  },
+  {
+    "event_id": "CAT-2025-11",
+    "name": "Ohio River Flood Inundation (Excluded)",
+    "peril": "Flood",
+    "start_date": "2025-05-28",
+    "end_date": "2025-05-30",
+    "treaty_id": "TR-2025-PROP-01"
+  },
+  {
+    "event_id": "CAT-2025-12",
+    "name": "Severe Hail Storm South",
+    "peril": "Hail",
+    "start_date": "2025-12-01",
+    "end_date": "2025-12-02",
+    "treaty_id": "TR-2025-PROP-01"
+  }
+]

@@ -1,0 +1,87 @@
+[
+  {
+    "treaty_id": "TR-2025-PROP-01",
+    "treaty_name": "Commercial Property Catastrophe Excess of Loss Treaty",
+    "type": "Per Occurrence Excess of Loss (CAT XOL)",
+    "reinsurer": "Munich Re Syndicate",
+    "broker": "Aon Reinsurance Solutions",
+    "inception_date": "2025-01-01",
+    "expiration_date": "2025-12-31",
+    "retention_usd": 2000000.0,
+    "limit_usd": 10000000.0,
+    "covered_perils": [
+      "Windstorm",
+      "Tornado",
+      "Hail",
+      "Winter Storm",
+      "Freezing",
+      "Wildfire"
+    ],
+    "excluded_perils": [
+      "Flood",
+      "Earthquake",
+      "Cyber",
+      "War",
+      "Nuclear"
+    ],
+    "hours_clause": 72,
+    "citation_page_retention": 4,
+    "citation_page_limit": 4,
+    "citation_page_perils": 7,
+    "citation_page_hours": 9
+  },
+  {
+    "treaty_id": "TR-2025-PROP-02",
+    "treaty_name": "Commercial Property Per Risk Excess of Loss Treaty",
+    "type": "Per Risk Excess of Loss",
+    "reinsurer": "Swiss Re Corporate Solutions",
+    "broker": "Guy Carpenter",
+    "inception_date": "2025-01-01",
+    "expiration_date": "2025-12-31",
+    "retention_usd": 1000000.0,
+    "limit_usd": 5000000.0,
+    "covered_perils": [
+      "Fire",
+      "Lightning",
+      "Explosion"
+    ],
+    "excluded_perils": [
+      "Flood",
+      "Earthquake",
+      "Terrorism"
+    ],
+    "hours_clause": 24,
+    "citation_page_retention": 3,
+    "citation_page_limit": 3,
+    "citation_page_perils": 5,
+    "citation_page_hours": 6
+  },
+  {
+    "treaty_id": "TR-2025-PROP-03",
+    "treaty_name": "Commercial Property Aggregate Stop Loss Treaty",
+    "type": "Annual Aggregate Stop Loss",
+    "reinsurer": "Hannover Re",
+    "broker": "Gallagher Re",
+    "inception_date": "2025-01-01",
+    "expiration_date": "2025-12-31",
+    "retention_usd": 15000000.0,
+    "limit_usd": 20000000.0,
+    "covered_perils": [
+      "Windstorm",
+      "Fire",
+      "Winter Storm",
+      "Explosion",
+      "Wildfire"
+    ],
+    "excluded_perils": [
+      "Flood",
+      "Earthquake",
+      "Cyber"
+    ],
+    "hours_clause": 168,
+    "citation_page_retention": 5,
+    "citation_page_limit": 5,
+    "citation_page_perils": 8,
+    "citation_page_hours": 11
+  }
+]
